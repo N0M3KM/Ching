@@ -3,5 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "dependencies": { "@ching/contracts": "0.0.1" }
+  "dependencies": {
+    "@ching/contracts": "0.0.1",
+    "hanzi-writer": "^3.7.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
 }

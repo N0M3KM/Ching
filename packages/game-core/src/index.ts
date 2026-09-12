@@ -5,3 +5,9 @@ export interface GameEngine {
   generate(input: { lesson: Lesson; seed: number; content: ContentSeed }): GameSession;
   grade(session: GameSession, answers: readonly RoundAnswer[], content: ContentSeed): SessionResult;
 }
+
+export { ToneMatchEngine } from './tone-match.js';
+export { PinyinMatchEngine } from './pinyin-match.js';
+export { ListenPickEngine } from './listen-pick.js';
+export { CharacterTraceEngine } from './character-trace.js';
+export { GameInputError } from './common.js';

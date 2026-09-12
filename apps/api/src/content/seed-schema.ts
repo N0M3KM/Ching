@@ -24,7 +24,17 @@ class TrackDto {
   @IsObject() @ValidateNested() @Type(() => LocalizedTextDto) title!: LocalizedTextDto;
   @IsObject() @ValidateNested() @Type(() => LocalizedTextDto) description!: LocalizedTextDto;
 }
+class PracticeDto {
+ @IsArray() @ArrayMinSize(1) @IsIn([1,2,3,4,5], {each:true}) spokenTones!: number[];
+ @IsString() @Matches(/\S/) spokenPinyin!: string;
+ @IsString() @Matches(/^\p{Script=Han}$/u) traceCharacter!: string;
+ @IsObject() @ValidateNested() @Type(() => LocalizedTextDto) sentence!: LocalizedTextDto;
+ @IsString() @Matches(/\S/) sentencePinyin!: string;
+ @IsArray() @ArrayMinSize(6) @ArrayUnique() @IsString({each:true}) pinyinChoices!: string[];
+ @IsObject() @ValidateNested() @Type(() => LocalizedTextDto) explanation!: LocalizedTextDto;
+}
 class VocabularyDto extends IdentifiedDto {
+ @ValidateIf((_o,v:unknown)=>v!==undefined) @IsObject() @ValidateNested() @Type(() => PracticeDto) practice?: PracticeDto;
   @IsIn(LEVELS) level!: Level;
   @IsString() @Matches(/\S/) @MaxLength(200) simplified!: string;
   @ValidateIf((_object, value: unknown) => value !== undefined) @IsString() @Matches(/\S/) @MaxLength(200) traditional?: string;
@@ -136,6 +146,9 @@ export function validateSeed(input: unknown): ContentSeed {
         errors.push(`${lesson.id}.${round.id}: insufficient vocabulary for track choice count`);
       }
       for (const id of round.vocabularyIds) {
+        const word = dto.vocabulary.find(v=>v.id===id);
+        if (word && !word.practice) errors.push(id+': missing practice content');
+        if (word?.practice && !word.practice.pinyinChoices.includes(word.pinyin)) errors.push(id+': pinyin answer absent from choices');
         if (!vocabularyIds.has(id)) errors.push(`${lesson.id}.${round.id}: unknown vocabulary ${id}`);
       }
       for (const id of round.sentenceIds) {
