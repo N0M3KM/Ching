@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "0.0.1",
+  "sources": [
+    {
+      "id": "ching-original-fixtures",
+      "name": "Ching original development fixtures",
+      "license": "Project-authored development content; external dataset licenses do not apply.",
+      "attribution": "Original starter fixtures generated for Ching. These are not CC-CEDICT or Tatoeba imports. Linguistic review is pending."
+    }
+  ],
+  "tracks": [
+    {
+      "id": "beginner",
+      "title": {
+        "en": "Beginner",
+        "zh-Hans": "初级",
+        "zh-Hant": "初級"
+      },
+      "description": {
+        "en": "Start with everyday words and the four tones.",
+        "zh-Hans": "从日常词语和四声开始。",
+        "zh-Hant": "從日常詞語和四聲開始。"
+      }
+    },
+    {
+      "id": "intermediate",
+      "title": {
+        "en": "Intermediate",
+        "zh-Hans": "中级",
+        "zh-Hant": "中級"
+      },
+      "description": {
+        "en": "Build phrases with classifiers and connected tones.",
+        "zh-Hans": "练习量词、短语和连读声调。",
+        "zh-Hant": "練習量詞、短語和連讀聲調。"
+      }
+    },
+    {
+      "id": "advanced",
+      "title": {
+        "en": "Advanced",
+        "zh-Hans": "高级",
+        "zh-Hant": "高級"
+      },
+      "description": {
+        "en": "Explore precise meaning, idioms, and register.",
+        "zh-Hans": "探索近义词、成语和语体。",
+        "zh-Hant": "探索近義詞、成語和語體。"
+      }
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "water",
+      "level": "beginner",
+      "simplified": "水",
+      "traditional": "水",
+      "pinyin": "shuǐ",
+      "definitions": [
+        "water"
+      ],
+      "audioText": "水",
+      "tags": [
+        "survival"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "tea",
+      "level": "beginner",
+      "simplified": "茶",
+      "traditional": "茶",
+      "pinyin": "chá",
+      "definitions": [
+        "tea"
+      ],
+      "audioText": "茶",
+      "tags": [
+        "survival"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "rice",
+      "level": "beginner",
+      "simplified": "米",
+      "traditional": "米",
+      "pinyin": "mǐ",
+      "definitions": [
+        "rice"
+      ],
+      "audioText": "米",
+      "tags": [
+        "survival"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "person",
+      "level": "beginner",
+      "simplified": "人",
+      "traditional": "人",
+      "pinyin": "rén",
+      "definitions": [
+        "person"
+      ],
+      "audioText": "人",
+      "tags": [
+        "survival"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "big",
+      "level": "beginner",
+      "simplified": "大",
+      "traditional": "大",
+      "pinyin": "dà",
+      "definitions": [
+        "big"
+      ],
+      "audioText": "大",
+      "tags": [
+        "survival"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "sky",
+      "level": "beginner",
+      "simplified": "天",
+      "traditional": "天",
+      "pinyin": "tiān",
+      "definitions": [
+        "sky"
+      ],
+      "audioText": "天",
+      "tags": [
+        "survival"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "cup",
+      "level": "intermediate",
+      "simplified": "杯子",
+      "traditional": "杯子",
+      "pinyin": "bēi zi",
+      "definitions": [
+        "cup"
+      ],
+      "audioText": "杯子",
+      "tags": [
+        "daily-life"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "bottle",
+      "level": "intermediate",
+      "simplified": "瓶子",
+      "traditional": "瓶子",
+      "pinyin": "píng zi",
+      "definitions": [
+        "bottle"
+      ],
+      "audioText": "瓶子",
+      "tags": [
+        "daily-life"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "buy",
+      "level": "intermediate",
+      "simplified": "购买",
+      "traditional": "購買",
+      "pinyin": "gòu mǎi",
+      "definitions": [
+        "to purchase"
+      ],
+      "audioText": "购买",
+      "tags": [
+        "daily-life"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "prepare",
+      "level": "intermediate",
+      "simplified": "准备",
+      "traditional": "準備",
+      "pinyin": "zhǔn bèi",
+      "definitions": [
+        "to prepare"
+      ],
+      "audioText": "准备",
+      "tags": [
+        "daily-life"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "one-cup",
+      "level": "intermediate",
+      "simplified": "一杯",
+      "traditional": "一杯",
+      "pinyin": "yì bēi",
+      "definitions": [
+        "one cup"
+      ],
+      "audioText": "一杯",
+      "tags": [
+        "daily-life"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "very-good",
+      "level": "intermediate",
+      "simplified": "很好",
+      "traditional": "很好",
+      "pinyin": "hěn hǎo",
+      "definitions": [
+        "very good"
+      ],
+      "audioText": "很好",
+      "tags": [
+        "daily-life"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "consider",
+      "level": "advanced",
+      "simplified": "考虑",
+      "traditional": "考慮",
+      "pinyin": "kǎo lǜ",
+      "definitions": [
+        "to consider"
+      ],
+      "audioText": "考虑",
+      "tags": [
+        "register"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "deliberate",
+      "level": "advanced",
+      "simplified": "斟酌",
+      "traditional": "斟酌",
+      "pinyin": "zhēn zhuó",
+      "definitions": [
+        "to deliberate carefully"
+      ],
+      "audioText": "斟酌",
+      "tags": [
+        "register"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "discuss",
+      "level": "advanced",
+      "simplified": "商量",
+      "traditional": "商量",
+      "pinyin": "shāng liang",
+      "definitions": [
+        "to discuss together"
+      ],
+      "audioText": "商量",
+      "tags": [
+        "register"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "negotiate",
+      "level": "advanced",
+      "simplified": "协商",
+      "traditional": "協商",
+      "pinyin": "xié shāng",
+      "definitions": [
+        "to negotiate"
+      ],
+      "audioText": "协商",
+      "tags": [
+        "register"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "decide",
+      "level": "advanced",
+      "simplified": "决定",
+      "traditional": "決定",
+      "pinyin": "jué dìng",
+      "definitions": [
+        "to decide"
+      ],
+      "audioText": "决定",
+      "tags": [
+        "register"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "think-twice",
+      "level": "advanced",
+      "simplified": "三思而后行",
+      "traditional": "三思而後行",
+      "pinyin": "sān sī ér hòu xíng",
+      "definitions": [
+        "think twice before acting"
+      ],
+      "audioText": "三思而后行",
+      "tags": [
+        "register"
+      ],
+      "sourceId": "ching-original-fixtures"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "want-water",
+      "level": "beginner",
+      "simplified": "我要水。",
+      "traditional": "我要水。",
+      "pinyin": "wǒ yào shuǐ",
+      "translation": {
+        "en": "I want water.",
+        "zh-Hans": "我要水。",
+        "zh-Hant": "我要水。"
+      },
+      "tags": [
+        "survival"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "buy-one-cup",
+      "level": "intermediate",
+      "simplified": "我想买一杯茶。",
+      "traditional": "我想買一杯茶。",
+      "pinyin": "wǒ xiǎng mǎi yì bēi chá",
+      "translation": {
+        "en": "I would like to buy a cup of tea.",
+        "zh-Hans": "我想买一杯茶。",
+        "zh-Hant": "我想買一杯茶。"
+      },
+      "tags": [
+        "daily-life",
+        "classifiers"
+      ],
+      "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "consider-before-deciding",
+      "level": "advanced",
+      "simplified": "做决定之前，请仔细斟酌。",
+      "traditional": "做決定之前，請仔細斟酌。",
+      "pinyin": "zuò jué dìng zhī qián, qǐng zǐ xì zhēn zhuó",
+      "translation": {
+        "en": "Before making a decision, please deliberate carefully.",
+        "zh-Hans": "做决定之前，请仔细斟酌。",
+        "zh-Hant": "做決定之前，請仔細斟酌。"
+      },
+      "tags": [
+        "register",
+        "decisions"
+      ],
+      "sourceId": "ching-original-fixtures"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "beginner-01",
+      "track": "beginner",
+      "order": 1,
+      "title": {
+        "en": "Everyday essentials",
+        "zh-Hans": "日常基础",
+        "zh-Hant": "日常基礎"
+      },
+      "goal": {
+        "en": "Recognize familiar words and their tones.",
+        "zh-Hans": "识别常用词及其声调。",
+        "zh-Hant": "識別常用詞及其聲調。"
+      },
+      "rounds": [
+        {
+          "id": "beginner-tone-match",
+          "game": "tone-match",
+          "vocabularyIds": [
+            "water",
+            "tea",
+            "rice",
+            "person",
+            "big",
+            "sky"
+          ],
+          "sentenceIds": [
+            "want-water"
+          ]
+        },
+        {
+          "id": "beginner-pinyin-match",
+          "game": "pinyin-match",
+          "vocabularyIds": [
+            "water",
+            "tea",
+            "rice",
+            "person",
+            "big",
+            "sky"
+          ],
+          "sentenceIds": [
+            "want-water"
+          ]
+        },
+        {
+          "id": "beginner-listen-pick",
+          "game": "listen-pick",
+          "vocabularyIds": [
+            "water",
+            "tea",
+            "rice",
+            "person",
+            "big",
+            "sky"
+          ],
+          "sentenceIds": [
+            "want-water"
+          ]
+        },
+        {
+          "id": "beginner-character-trace",
+          "game": "character-trace",
+          "vocabularyIds": [
+            "water",
+            "tea",
+            "rice",
+            "person",
+            "big",
+            "sky"
+          ],
+          "sentenceIds": [
+            "want-water"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate-01",
+      "track": "intermediate",
+      "order": 1,
+      "title": {
+        "en": "A cup of tea",
+        "zh-Hans": "一杯茶",
+        "zh-Hant": "一杯茶"
+      },
+      "goal": {
+        "en": "Recognize short phrases and classifier patterns.",
+        "zh-Hans": "识别短语和量词搭配。",
+        "zh-Hant": "識別短語和量詞搭配。"
+      },
+      "rounds": [
+        {
+          "id": "intermediate-tone-match",
+          "game": "tone-match",
+          "vocabularyIds": [
+            "cup",
+            "bottle",
+            "buy",
+            "prepare",
+            "one-cup",
+            "very-good"
+          ],
+          "sentenceIds": [
+            "buy-one-cup"
+          ]
+        },
+        {
+          "id": "intermediate-pinyin-match",
+          "game": "pinyin-match",
+          "vocabularyIds": [
+            "cup",
+            "bottle",
+            "buy",
+            "prepare",
+            "one-cup",
+            "very-good"
+          ],
+          "sentenceIds": [
+            "buy-one-cup"
+          ]
+        },
+        {
+          "id": "intermediate-listen-pick",
+          "game": "listen-pick",
+          "vocabularyIds": [
+            "cup",
+            "bottle",
+            "buy",
+            "prepare",
+            "one-cup",
+            "very-good"
+          ],
+          "sentenceIds": [
+            "buy-one-cup"
+          ]
+        },
+        {
+          "id": "intermediate-character-trace",
+          "game": "character-trace",
+          "vocabularyIds": [
+            "cup",
+            "bottle",
+            "buy",
+            "prepare",
+            "one-cup",
+            "very-good"
+          ],
+          "sentenceIds": [
+            "buy-one-cup"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-01",
+      "track": "advanced",
+      "order": 1,
+      "title": {
+        "en": "Choose your words",
+        "zh-Hans": "斟酌用词",
+        "zh-Hant": "斟酌用詞"
+      },
+      "goal": {
+        "en": "Distinguish words for considering and deciding.",
+        "zh-Hans": "区分思考与决定的表达。",
+        "zh-Hant": "區分思考與決定的表達。"
+      },
+      "rounds": [
+        {
+          "id": "advanced-tone-match",
+          "game": "tone-match",
+          "vocabularyIds": [
+            "consider",
+            "deliberate",
+            "discuss",
+            "negotiate",
+            "decide",
+            "think-twice"
+          ],
+          "sentenceIds": [
+            "consider-before-deciding"
+          ]
+        },
+        {
+          "id": "advanced-pinyin-match",
+          "game": "pinyin-match",
+          "vocabularyIds": [
+            "consider",
+            "deliberate",
+            "discuss",
+            "negotiate",
+            "decide",
+            "think-twice"
+          ],
+          "sentenceIds": [
+            "consider-before-deciding"
+          ]
+        },
+        {
+          "id": "advanced-listen-pick",
+          "game": "listen-pick",
+          "vocabularyIds": [
+            "consider",
+            "deliberate",
+            "discuss",
+            "negotiate",
+            "decide",
+            "think-twice"
+          ],
+          "sentenceIds": [
+            "consider-before-deciding"
+          ]
+        },
+        {
+          "id": "advanced-character-trace",
+          "game": "character-trace",
+          "vocabularyIds": [
+            "consider",
+            "deliberate",
+            "discuss",
+            "negotiate",
+            "decide",
+            "think-twice"
+          ],
+          "sentenceIds": [
+            "consider-before-deciding"
+          ]
+        }
+      ]
+    }
+  ]
+}
