@@ -2,7 +2,7 @@
     "name":  "ching",
     "version":  "0.0.1",
     "private":  true,
-    "description":  "Game-first Mandarin learning โ€” local progress, static content",
+    "description":  "Game-first Mandarin learning เน€เธยเนยเธเนโฌย local progress, static content",
     "engines":  {
                     "node":  "\u003e=24"
                 },
@@ -11,14 +11,20 @@
                        "packages/*"
                    ],
     "scripts":  {
-                    "build":  "tsc -b",
+                    "build":  "tsc -b \u0026\u0026 vite build --config apps/web/vite.config.mts apps/web",
                     "typecheck":  "tsc --noEmit -p tsconfig.json",
                     "lint":  "eslint . --max-warnings 0",
                     "test":  "vitest run",
                     "test:watch":  "vitest",
                     "content:validate":  "tsx apps/api/src/content/validate.ts",
                     "check":  "node scripts/run-check.mjs",
-                    "check:inner":  "npm run lint \u0026\u0026 npm run typecheck \u0026\u0026 npm test \u0026\u0026 npm run build \u0026\u0026 npm run content:validate"
+                    "check:inner":  "npm run lint \u0026\u0026 npm run typecheck \u0026\u0026 npm test \u0026\u0026 npm run build \u0026\u0026 npm run content:validate",
+                    "dev":  "node scripts/runtime.mjs dev",
+                    "dev:api":  "tsx watch --env-file-if-exists=.env apps/api/src/main.ts",
+                    "dev:web":  "vite --config apps/web/vite.config.mts apps/web",
+                    "test:e2e":  "node scripts/runtime.mjs e2e",
+                    "dev:inner":  "concurrently -k \"npm:dev:api\" \"npm:dev:web\"",
+                    "test:e2e:inner":  "playwright test"
                 },
     "devDependencies":  {
                             "@axe-core/playwright":  "^4.13.0",
@@ -41,5 +47,8 @@
                             "typescript-eslint":  "^8.70.0",
                             "vite":  "^8.3.0",
                             "vitest":  "^4.1.11"
-                        }
+                        },
+    "overrides":  {
+                      "multer":  "^2.3.0"
+                  }
 }

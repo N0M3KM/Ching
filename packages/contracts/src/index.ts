@@ -31,11 +31,11 @@ export interface PracticeContent {
  readonly explanation: LocalizedText;
 }
 export interface Vocabulary {
- readonly practice?: PracticeContent;
+ readonly practice?: PracticeContent | undefined;
   readonly id: string;
   readonly level: Level;
   readonly simplified: string;
-  readonly traditional?: string;
+  readonly traditional?: string | undefined;
   readonly pinyin: string;
   readonly definitions: readonly string[];
   readonly audioText: string;
@@ -70,7 +70,7 @@ export interface ExampleSentence {
   readonly id: string;
   readonly level: Level;
   readonly simplified: string;
-  readonly traditional?: string;
+  readonly traditional?: string | undefined;
   readonly pinyin: string;
   readonly translation: LocalizedText;
   readonly tags: readonly string[];
@@ -81,7 +81,7 @@ export interface ContentSource {
   readonly name: string;
   readonly license: string;
   readonly attribution: string;
-  readonly url?: string;
+  readonly url?: string | undefined;
 }
 export interface ContentSeed {
   readonly schemaVersion: 1;
@@ -104,8 +104,8 @@ export interface GameRound {
   readonly options: readonly AnswerOption[];
   readonly transcript: string;
   readonly pinyin: string;
-  readonly audioText?: string;
-  readonly traceCharacter?: string;
+  readonly audioText?: string | undefined;
+  readonly traceCharacter?: string | undefined;
   readonly feedback: { readonly correct: LocalizedText; readonly incorrect: LocalizedText };
   readonly explanation: LocalizedText;
   readonly timeLimitSeconds: number | null;
@@ -120,7 +120,7 @@ export interface GameSession {
 export interface CreateSessionRequest {
   readonly lessonId: string;
   readonly game: GameType;
-  readonly seed?: number;
+  readonly seed?: number | undefined;
 }
 export interface RoundAnswer {
   readonly roundId: string;
@@ -157,9 +157,9 @@ export interface ReviewCard {
   readonly lastReviewedAt: string;
 }
 export interface LocalProgress {
-  readonly lastActivityDate?: string;
-  readonly completedGameKeys?: readonly string[];
-  readonly awardedSessionIds?: readonly string[];
+  readonly lastActivityDate?: string | undefined;
+  readonly completedGameKeys?: readonly string[] | undefined;
+  readonly awardedSessionIds?: readonly string[] | undefined;
   readonly schemaVersion: 1;
   readonly completedLessonIds: readonly string[];
   readonly xp: number;
@@ -180,6 +180,6 @@ export interface DictionaryRequest { readonly query: string }
 export interface DictionaryResponse { readonly entries: readonly Vocabulary[] }
 export interface PinyinRequest { readonly text: string }
 export interface PinyinResponse { readonly text: string; readonly pinyin: string }
-export interface SentencesRequest { readonly level?: Level; readonly tag?: string }
+export interface SentencesRequest { readonly level?: Level | undefined; readonly tag?: string }
 export interface SentencesResponse { readonly sentences: readonly ExampleSentence[] }
 export interface HealthResponse { readonly status: 'ok'; readonly contentVersion: string }
