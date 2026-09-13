@@ -9,7 +9,7 @@ for(const [track,index] of [['beginner',0],['intermediate',1],['advanced',2]] as
   await page.goto('/');await expect(page.getByRole('heading',{name:'Your learning paths'})).toBeVisible();
   await page.locator('.track-tabs button').nth(index).click();
   for(const game of GAME_TYPES){
-   await page.getByRole('button',{name:new RegExp(names[game])}).click();
+   await page.getByRole('button',{name:new RegExp(names[game])}).first().click();
    const created=page.waitForResponse(r=>r.url().endsWith('/minigames/sessions')&&r.request().method()==='POST');
    await page.getByRole('button',{name:'Let’s play'}).click();
    const session=sessionSchema.parse(await (await created).json());
@@ -35,7 +35,7 @@ for(const [track,index] of [['beginner',0],['intermediate',1],['advanced',2]] as
    await page.getByRole('button',{name:'Back to courses',exact:true}).click();
   }
   const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),PROGRESS_STORAGE_KEY);
-  expect(saved.completedLessonIds).toContain(track+'-01');expect(saved.xp).toBeGreaterThan(0);expect(saved.completedGameKeys).toHaveLength(4);
+  expect(saved.completedLessonIds).toContain('hsk3-'+track+'-001');expect(saved.xp).toBeGreaterThan(0);expect(saved.completedGameKeys).toHaveLength(4);
   await page.reload();
   await expect(page.locator('.xp-pill')).toContainText(String(saved.xp));
   await page.locator('.track-tabs button').nth(index).click();
@@ -54,16 +54,17 @@ test('mobile, language switching, dictionary and audio fallback',async({page})=>
  await page.locator('#locale').selectOption('en');
  await page.getByRole('button',{name:'Dictionary',exact:true}).click();
  await page.getByLabel('Look up a word',{exact:true}).fill('水');await page.getByRole('button',{name:'Look up a word',exact:true}).click();
- await expect(page.locator('.dictionary-entry')).toContainText('water');
+ await expect(page.locator('.dictionary-entry').first()).toContainText('water');
  await page.getByRole('button',{name:'Learn',exact:true}).click();
- await page.getByRole('button',{name:/Listen & Pick/}).click();await page.getByRole('button',{name:'Let’s play'}).click();
+ await page.getByRole('button',{name:/Listen & Pick/}).first().click();await page.getByRole('button',{name:'Let’s play'}).click();
+ await page.route('**/api/v1/tts',route=>route.fulfill({status:503,json:{code:'TTS_UNAVAILABLE'}}),{times:1});
  await page.getByRole('button',{name:'Play audio'}).click();
  await expect(page.getByText('Audio is unavailable. Use the transcript or retry playback.')).toBeVisible();
  await page.getByText('Show transcript',{exact:true}).click();await expect(page.locator('.hanzi-small')).toBeVisible();
 });
 
 test('same-seed retry recovers failure and grading retry preserves the answer',async({page,request})=>{
- await page.goto('/');await page.getByRole('button',{name:/Tone Match/}).click();
+ await page.goto('/');await page.getByRole('button',{name:/Tone Match/}).first().click();
  const created=page.waitForResponse(r=>r.url().endsWith('/minigames/sessions')&&r.request().method()==='POST');
  await page.getByRole('button',{name:'Let’s play'}).click();
  const session=sessionSchema.parse(await (await created).json());
@@ -84,5 +85,5 @@ test('same-seed retry recovers failure and grading retry preserves the answer',a
  expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
  await page.reload();
  const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),PROGRESS_STORAGE_KEY);
- expect(saved.completedGameKeys).toContain('beginner-01|tone-match');expect(saved.xp).toBe(50);expect(Object.keys(saved.review)).toHaveLength(0);
+ expect(saved.completedGameKeys).toContain('hsk3-beginner-001|tone-match');expect(saved.xp).toBe(50);expect(Object.keys(saved.review)).toHaveLength(0);
 });

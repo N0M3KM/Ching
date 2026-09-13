@@ -11,3 +11,6 @@ test-results/
 .tmp/
 .cache/
 *.dmp
+
+__pycache__/
+*.pyc

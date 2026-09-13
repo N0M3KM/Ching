@@ -30,10 +30,8 @@ export interface PracticeContent {
  readonly pinyinChoices: readonly string[];
  readonly explanation: LocalizedText;
 }
-export interface Vocabulary {
- readonly practice?: PracticeContent | undefined;
+export interface DictionaryEntry {
   readonly id: string;
-  readonly level: Level;
   readonly simplified: string;
   readonly traditional?: string | undefined;
   readonly pinyin: string;
@@ -41,6 +39,10 @@ export interface Vocabulary {
   readonly audioText: string;
   readonly tags: readonly string[];
   readonly sourceId: string;
+}
+export interface Vocabulary extends DictionaryEntry {
+ readonly level: Level;
+ readonly practice?: PracticeContent | undefined;
 }
 /** Templates identify content; engines own generation and game-specific rules. */
 export interface RoundTemplate {
@@ -178,7 +180,7 @@ export interface ApiError { readonly code: string; readonly message: string; rea
 export interface LessonResponse { readonly lesson: Lesson; readonly difficulty: Difficulty; readonly games: readonly GameType[] }
 export interface TracksResponse { readonly tracks: readonly TrackSummary[] }
 export interface DictionaryRequest { readonly query: string }
-export interface DictionaryResponse { readonly entries: readonly Vocabulary[] }
+export interface DictionaryResponse { readonly entries: readonly DictionaryEntry[] }
 export interface PinyinRequest { readonly text: string }
 export interface PinyinResponse { readonly text: string; readonly pinyin: string }
 export interface SentencesRequest { readonly level?: Level | undefined; readonly tag?: string }

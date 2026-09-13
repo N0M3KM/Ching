@@ -15,7 +15,7 @@ export function Trace({character,level,locale,onReady}:{character:string;level:L
   const host=element.current;
   const instance=HanziWriter.create(host,character,{width:220,height:220,padding:16,showCharacter:false,showOutline:level==='beginner',strokeColor:'#2C2623',highlightColor:'#D9531E',outlineColor:'#b9aaa3',strokeAnimationSpeed:3,delayBetweenStrokes:70,
    charDataLoader:(_char,onComplete,onError)=>{
-    fetch('/strokes/'+encodeURIComponent(character)+'.json',{signal:abort.signal}).then(r=>{if(!r.ok)throw new Error('Missing strokes');return r.json() as Promise<unknown>;}).then(raw=>{
+    fetch('/api/v1/strokes/'+encodeURIComponent(character),{signal:abort.signal}).then(r=>{if(!r.ok)throw new Error('Missing strokes');return r.json() as Promise<unknown>;}).then(raw=>{
      const data=dataSchema.parse(raw);if(active){onComplete(data);setLoaded(true);}
     }).catch(error=>{if(active){setError(true);onError(error);}});
    },

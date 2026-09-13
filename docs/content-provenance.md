@@ -2,6 +2,8 @@
 
 The pre-alpha seed `content.v1.json` uses schema version 1 and content version 0.0.2. It includes 18 vocabulary records, four example sentences, three lesson definitions and curated practice contexts for four games.
 
+The full 125,047-entry reference dictionary is now bundled separately from the lesson seed. See [audio and dictionary integration](audio-and-dictionary.md) for the pinned snapshot, conversion, attribution and refresh procedure.
+
 ## CC-CEDICT
 
 Dictionary definitions for 16 vocabulary records were imported from the [MDBG CC-CEDICT download](https://www.mdbg.net/chinese/dictionary?page=cedict), by CC-CEDICT contributors, retrieved 2026-09-13. The exact 19 selected source entries and header are retained in [cedict-subset.txt](cedict-subset.txt). Data is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Changes: selected subset, JSON representation, curated pinyin spacing, track metadata. Adapted CC-CEDICT fields are distributed under the same license. The phrases 一杯 and 很好 remain Ching-authored records.

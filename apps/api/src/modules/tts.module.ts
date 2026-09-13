@@ -1,4 +1,4 @@
-import { Body, Controller, HttpException, Inject, Injectable, Module, Post, Req, ServiceUnavailableException } from '@nestjs/common';
+import { Body, HttpCode, Controller, HttpException, Inject, Injectable, Module, Post, Req, ServiceUnavailableException } from '@nestjs/common';
 import { IsIn, IsString, Matches, MaxLength, ValidateIf } from 'class-validator';
 import {createHash} from 'node:crypto';
 import type {Request} from 'express';
@@ -6,10 +6,12 @@ import type {TtsRequest,TtsResponse} from '@ching/contracts';
 import {TTS_PROVIDER} from '../ports/tts-provider.js';
 import type {TtsProvider} from '../ports/tts-provider.js';
 import {AzureTtsProvider,UnavailableTtsProvider} from '../adapters/azure-tts.provider.js';
+import {QwenTtsProvider,FallbackTtsProvider} from '../adapters/qwen-tts.provider.js';
+import {LocalTtsProvider} from '../adapters/local-tts.provider.js';
 import {DtoPipe} from '../http.js';
 class TtsDto implements TtsRequest {
  @IsString() @Matches(/\S/) @MaxLength(200) text!:string;
- @ValidateIf((_o,v:unknown)=>v!==undefined) @IsIn(['zh-CN-XiaoxiaoNeural','zh-CN-YunxiNeural']) voice?:string;
+ @ValidateIf((_o,v:unknown)=>v!==undefined) @IsIn(['cmn','zh-CN-XiaoxiaoNeural','zh-CN-YunxiNeural']) voice?:string;
 }
 @Injectable()
 export class TtsService {
@@ -23,7 +25,7 @@ export class TtsService {
   const rate=this.rates.get(client);
   if((rate?.count??0)>=12||(!rate&&this.rates.size>=1000))throw new HttpException({code:'TTS_RATE_LIMIT',message:'Too many audio requests. Please retry in one minute.'},429);
   this.rates.set(client,{expires:rate?.expires??now+60000,count:(rate?.count??0)+1});
-  const normalized={text:request.text.trim(),voice:request.voice??'zh-CN-XiaoxiaoNeural'};
+  const normalized={text:request.text.trim(),...(request.voice?{voice:request.voice}:{})};
   const key=createHash('sha256').update(JSON.stringify(normalized)).digest('hex');
   for(const [id,value] of this.cache)if(value.expires<=now)this.cache.delete(id);
   const cached=this.cache.get(key);if(cached)return cached.value;
@@ -43,10 +45,24 @@ export class TtsService {
 @Controller('api/v1/tts')
 class TtsController {
  constructor(@Inject(TtsService) private readonly service:TtsService){}
- @Post() speak(@Body(new DtoPipe(TtsDto)) dto:TtsDto,@Req() request:Request){return this.service.speak(dto,request.ip??'local');}
+ @Post() @HttpCode(200) speak(@Body(new DtoPipe(TtsDto)) dto:TtsDto,@Req() request:Request){return this.service.speak(dto,request.ip??'local');}
 }
 @Module({controllers:[TtsController],providers:[
- {provide:TTS_PROVIDER,useFactory:()=>process.env.TTS_PROVIDER==='azure'?new AzureTtsProvider(process.env.AZURE_SPEECH_KEY??'',process.env.AZURE_SPEECH_REGION??''):new UnavailableTtsProvider()},
+ {provide:TTS_PROVIDER,useFactory:()=>{
+  const provider=process.env.TTS_PROVIDER??'qwen3';
+  if(provider==='qwen3'){
+   const qwen=new QwenTtsProvider(process.env.QWEN_API_BASE_URL??'http://127.0.0.1:8000',process.env.QWEN_API_KEY??'');
+   const fallback=process.env.QWEN_FALLBACK_PROVIDER??'local';
+   if(fallback==='disabled')return qwen;
+   if(fallback==='local')return new FallbackTtsProvider(qwen,new LocalTtsProvider());
+   if(fallback==='azure')return new FallbackTtsProvider(qwen,new AzureTtsProvider(process.env.AZURE_SPEECH_KEY??'',process.env.AZURE_SPEECH_REGION??''));
+   throw new Error('Unknown QWEN_FALLBACK_PROVIDER');
+  }
+  if(provider==='local')return new LocalTtsProvider();
+  if(provider==='azure')return new AzureTtsProvider(process.env.AZURE_SPEECH_KEY??'',process.env.AZURE_SPEECH_REGION??'');
+  if(provider==='disabled')return new UnavailableTtsProvider();
+  throw new Error('Unknown TTS_PROVIDER. Use qwen3, local, azure, or disabled.');
+ }},
  TtsService,
 ],exports:[TtsService]})
 export class TtsModule {}
