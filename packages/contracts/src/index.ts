@@ -21,7 +21,17 @@ export const DIFFICULTY: Readonly<Record<Level, Difficulty>> = Object.freeze({
   advanced: Object.freeze({ roundCount: 10, choiceCount: 6, timeLimitSeconds: 15, pinyin: 'hidden', completionAccuracy: 0.8, traceGuidance: 'recall' }),
 });
 
+export interface PracticeContent {
+ readonly spokenTones: readonly number[];
+ readonly spokenPinyin: string;
+ readonly traceCharacter: string;
+ readonly sentence: LocalizedText;
+ readonly sentencePinyin: string;
+ readonly pinyinChoices: readonly string[];
+ readonly explanation: LocalizedText;
+}
 export interface Vocabulary {
+ readonly practice?: PracticeContent;
   readonly id: string;
   readonly level: Level;
   readonly simplified: string;
@@ -87,6 +97,7 @@ export interface AnswerOption {
   readonly label: LocalizedText;
 }
 export interface GameRound {
+  readonly vocabularyId: string;
   readonly id: string;
   readonly prompt: LocalizedText;
   readonly permittedAnswerIds: readonly string[];
@@ -121,6 +132,7 @@ export interface GradeSessionRequest {
   readonly answers: readonly RoundAnswer[];
 }
 export interface RoundResult {
+  readonly vocabularyId: string;
   readonly roundId: string;
   readonly answerId: string | null;
   readonly correctAnswerId: string;
@@ -145,6 +157,9 @@ export interface ReviewCard {
   readonly lastReviewedAt: string;
 }
 export interface LocalProgress {
+  readonly lastActivityDate?: string;
+  readonly completedGameKeys?: readonly string[];
+  readonly awardedSessionIds?: readonly string[];
   readonly schemaVersion: 1;
   readonly completedLessonIds: readonly string[];
   readonly xp: number;

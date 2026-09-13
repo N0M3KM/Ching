@@ -1,12 +1,26 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "0.0.1",
+  "contentVersion": "0.0.2",
   "sources": [
     {
       "id": "ching-original-fixtures",
       "name": "Ching original development fixtures",
       "license": "Project-authored development content; external dataset licenses do not apply.",
       "attribution": "Original starter fixtures generated for Ching. These are not CC-CEDICT or Tatoeba imports. Linguistic review is pending."
+    },
+    {
+      "id": "cc-cedict",
+      "name": "CC-CEDICT contributors",
+      "license": "CC-BY-SA-4.0",
+      "attribution": "CC-CEDICT via MDBG, retrieved 2026-09-13. Curated subset; lexical pinyin spacing and track metadata adapted by Ching.",
+      "url": "https://www.mdbg.net/chinese/dictionary?page=cedict"
+    },
+    {
+      "id": "tatoeba-4869782",
+      "name": "Tatoeba sentence 4869782",
+      "license": "CC-BY-2.0-FR",
+      "attribution": "你好！ by zvzuibqx, added January 29, 2016. Ching added pinyin, English translation and level metadata.",
+      "url": "https://tatoeba.org/en/sentences/show/4869782"
     }
   ],
   "tracks": [
@@ -58,13 +72,48 @@
       "traditional": "水",
       "pinyin": "shuǐ",
       "definitions": [
-        "water"
+        "surname Shui",
+        "Shui ethnic group",
+        "water",
+        "(after a name) ... River",
+        "to swim (used mostly in 會水|会水[hui4 shui3] and 水性[shui3 xing4])",
+        "(coll.) lacking in substance; shoddy",
+        "(bound form) additional cost; extra income",
+        "classifier for washings of a garment"
       ],
       "audioText": "水",
       "tags": [
         "survival"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          3
+        ],
+        "spokenPinyin": "shuǐ",
+        "traceCharacter": "水",
+        "sentence": {
+          "en": "I want water.",
+          "zh-Hans": "我要水。",
+          "zh-Hant": "我要水。"
+        },
+        "sentencePinyin": "wǒ yào shuǐ",
+        "pinyinChoices": [
+          "shuǐ",
+          "shuī",
+          "shuí",
+          "shuì",
+          "chá",
+          "mǐ",
+          "rén",
+          "dà"
+        ],
+        "explanation": {
+          "en": "水 · shuǐ. Listen to the whole word and distinguish each syllable. Context: I want water.",
+          "zh-Hans": "水 · shuǐ。注意每个音节的声调和语境。我要水。",
+          "zh-Hant": "水 · shuǐ。注意每個音節的聲調和語境。我要水。"
+        }
+      }
     },
     {
       "id": "tea",
@@ -73,13 +122,43 @@
       "traditional": "茶",
       "pinyin": "chá",
       "definitions": [
-        "tea"
+        "tea",
+        "tea plant",
+        "CL:杯[bei1],壺|壶[hu2]"
       ],
       "audioText": "茶",
       "tags": [
         "survival"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          2
+        ],
+        "spokenPinyin": "chá",
+        "traceCharacter": "茶",
+        "sentence": {
+          "en": "I drink tea.",
+          "zh-Hans": "我喝茶。",
+          "zh-Hant": "我喝茶。"
+        },
+        "sentencePinyin": "wǒ hē chá",
+        "pinyinChoices": [
+          "chá",
+          "chā",
+          "chǎ",
+          "chà",
+          "shuǐ",
+          "mǐ",
+          "rén",
+          "dà"
+        ],
+        "explanation": {
+          "en": "茶 · chá. Listen to the whole word and distinguish each syllable. Context: I drink tea.",
+          "zh-Hans": "茶 · chá。注意每个音节的声调和语境。我喝茶。",
+          "zh-Hant": "茶 · chá。注意每個音節的聲調和語境。我喝茶。"
+        }
+      }
     },
     {
       "id": "rice",
@@ -88,13 +167,44 @@
       "traditional": "米",
       "pinyin": "mǐ",
       "definitions": [
-        "rice"
+        "surname Mi",
+        "uncooked rice",
+        "meter (unit of length)",
+        "(slang) Chinese yuan"
       ],
       "audioText": "米",
       "tags": [
         "survival"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          3
+        ],
+        "spokenPinyin": "mǐ",
+        "traceCharacter": "米",
+        "sentence": {
+          "en": "This is rice.",
+          "zh-Hans": "这是米。",
+          "zh-Hant": "這是米。"
+        },
+        "sentencePinyin": "zhè shì mǐ",
+        "pinyinChoices": [
+          "mǐ",
+          "mī",
+          "mí",
+          "mì",
+          "shuǐ",
+          "chá",
+          "rén",
+          "dà"
+        ],
+        "explanation": {
+          "en": "米 · mǐ. Listen to the whole word and distinguish each syllable. Context: This is rice.",
+          "zh-Hans": "米 · mǐ。注意每个音节的声调和语境。这是米。",
+          "zh-Hant": "米 · mǐ。注意每個音節的聲調和語境。這是米。"
+        }
+      }
     },
     {
       "id": "person",
@@ -103,13 +213,42 @@
       "traditional": "人",
       "pinyin": "rén",
       "definitions": [
-        "person"
+        "person; people",
+        "CL:個|个[ge4],位[wei4],名[ming2]"
       ],
       "audioText": "人",
       "tags": [
         "survival"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          2
+        ],
+        "spokenPinyin": "rén",
+        "traceCharacter": "人",
+        "sentence": {
+          "en": "He is a good person.",
+          "zh-Hans": "他是好人。",
+          "zh-Hant": "他是好人。"
+        },
+        "sentencePinyin": "tā shì hǎo rén",
+        "pinyinChoices": [
+          "rén",
+          "rēn",
+          "rěn",
+          "rèn",
+          "shuǐ",
+          "chá",
+          "mǐ",
+          "dà"
+        ],
+        "explanation": {
+          "en": "人 · rén. Listen to the whole word and distinguish each syllable. Context: He is a good person.",
+          "zh-Hans": "人 · rén。注意每个音节的声调和语境。他是好人。",
+          "zh-Hant": "人 · rén。注意每個音節的聲調和語境。他是好人。"
+        }
+      }
     },
     {
       "id": "big",
@@ -118,13 +257,47 @@
       "traditional": "大",
       "pinyin": "dà",
       "definitions": [
-        "big"
+        "big; large; great",
+        "older (than another person)",
+        "eldest (as in 大姐[da4 jie3])",
+        "greatly; freely; fully",
+        "(dialect) father",
+        "(dialect) uncle (father's brother)",
+        "see 大夫[dai4 fu5]"
       ],
       "audioText": "大",
       "tags": [
         "survival"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          4
+        ],
+        "spokenPinyin": "dà",
+        "traceCharacter": "大",
+        "sentence": {
+          "en": "This is big.",
+          "zh-Hans": "这个很大。",
+          "zh-Hant": "這個很大。"
+        },
+        "sentencePinyin": "zhè ge hěn dà",
+        "pinyinChoices": [
+          "dà",
+          "dā",
+          "dá",
+          "dǎ",
+          "shuǐ",
+          "chá",
+          "mǐ",
+          "rén"
+        ],
+        "explanation": {
+          "en": "大 · dà. Listen to the whole word and distinguish each syllable. Context: This is big.",
+          "zh-Hans": "大 · dà。注意每个音节的声调和语境。这个很大。",
+          "zh-Hant": "大 · dà。注意每個音節的聲調和語境。這個很大。"
+        }
+      }
     },
     {
       "id": "sky",
@@ -133,13 +306,43 @@
       "traditional": "天",
       "pinyin": "tiān",
       "definitions": [
-        "sky"
+        "day",
+        "sky",
+        "heaven"
       ],
       "audioText": "天",
       "tags": [
         "survival"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          1
+        ],
+        "spokenPinyin": "tiān",
+        "traceCharacter": "天",
+        "sentence": {
+          "en": "The sky is blue.",
+          "zh-Hans": "天很蓝。",
+          "zh-Hant": "天很藍。"
+        },
+        "sentencePinyin": "tiān hěn lán",
+        "pinyinChoices": [
+          "tiān",
+          "tián",
+          "tiǎn",
+          "tiàn",
+          "shuǐ",
+          "chá",
+          "mǐ",
+          "rén"
+        ],
+        "explanation": {
+          "en": "天 · tiān. Listen to the whole word and distinguish each syllable. Context: The sky is blue.",
+          "zh-Hans": "天 · tiān。注意每个音节的声调和语境。天很蓝。",
+          "zh-Hant": "天 · tiān。注意每個音節的聲調和語境。天很藍。"
+        }
+      }
     },
     {
       "id": "cup",
@@ -148,13 +351,44 @@
       "traditional": "杯子",
       "pinyin": "bēi zi",
       "definitions": [
-        "cup"
+        "cup",
+        "glass",
+        "CL:個|个[ge4],隻|只[zhi1]"
       ],
       "audioText": "杯子",
       "tags": [
         "daily-life"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          1,
+          5
+        ],
+        "spokenPinyin": "bēi zi",
+        "traceCharacter": "杯",
+        "sentence": {
+          "en": "Please give me a cup.",
+          "zh-Hans": "请给我一个杯子。",
+          "zh-Hant": "請給我一個杯子。"
+        },
+        "sentencePinyin": "qǐng gěi wǒ yí ge bēi zi",
+        "pinyinChoices": [
+          "bēi zi",
+          "béi zi",
+          "běi zi",
+          "bèi zi",
+          "shuǐ",
+          "chá",
+          "mǐ",
+          "rén"
+        ],
+        "explanation": {
+          "en": "杯子 · bēi zi. Listen to the whole word and distinguish each syllable. Context: Please give me a cup.",
+          "zh-Hans": "杯子 · bēi zi。注意每个音节的声调和语境。请给我一个杯子。",
+          "zh-Hant": "杯子 · bēi zi。注意每個音節的聲調和語境。請給我一個杯子。"
+        }
+      }
     },
     {
       "id": "bottle",
@@ -163,13 +397,43 @@
       "traditional": "瓶子",
       "pinyin": "píng zi",
       "definitions": [
-        "bottle"
+        "bottle",
+        "CL:個|个[ge4]"
       ],
       "audioText": "瓶子",
       "tags": [
         "daily-life"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          2,
+          5
+        ],
+        "spokenPinyin": "píng zi",
+        "traceCharacter": "瓶",
+        "sentence": {
+          "en": "Please give me a bottle.",
+          "zh-Hans": "请给我一个瓶子。",
+          "zh-Hant": "請給我一個瓶子。"
+        },
+        "sentencePinyin": "qǐng gěi wǒ yí ge píng zi",
+        "pinyinChoices": [
+          "píng zi",
+          "pīng zi",
+          "pǐng zi",
+          "pìng zi",
+          "shuǐ",
+          "chá",
+          "mǐ",
+          "rén"
+        ],
+        "explanation": {
+          "en": "瓶子 · píng zi. Listen to the whole word and distinguish each syllable. Context: Please give me a bottle.",
+          "zh-Hans": "瓶子 · píng zi。注意每个音节的声调和语境。请给我一个瓶子。",
+          "zh-Hant": "瓶子 · píng zi。注意每個音節的聲調和語境。請給我一個瓶子。"
+        }
+      }
     },
     {
       "id": "buy",
@@ -178,13 +442,42 @@
       "traditional": "購買",
       "pinyin": "gòu mǎi",
       "definitions": [
-        "to purchase"
+        "to purchase; to buy"
       ],
       "audioText": "购买",
       "tags": [
         "daily-life"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          4,
+          3
+        ],
+        "spokenPinyin": "gòu mǎi",
+        "traceCharacter": "购",
+        "sentence": {
+          "en": "I would like to purchase this cup.",
+          "zh-Hans": "我想购买这个杯子。",
+          "zh-Hant": "我想購買這個杯子。"
+        },
+        "sentencePinyin": "wǒ xiǎng gòu mǎi zhè ge bēi zi",
+        "pinyinChoices": [
+          "gòu mǎi",
+          "gōu mǎi",
+          "góu mǎi",
+          "gǒu mǎi",
+          "gòu māi",
+          "gòu mái",
+          "gòu mài",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "购买 · gòu mǎi. Listen to the whole word and distinguish each syllable. Context: I would like to purchase this cup.",
+          "zh-Hans": "购买 · gòu mǎi。注意每个音节的声调和语境。我想购买这个杯子。",
+          "zh-Hant": "購買 · gòu mǎi。注意每個音節的聲調和語境。我想購買這個杯子。"
+        }
+      }
     },
     {
       "id": "prepare",
@@ -193,13 +486,46 @@
       "traditional": "準備",
       "pinyin": "zhǔn bèi",
       "definitions": [
-        "to prepare"
+        "preparation",
+        "to prepare",
+        "to intend",
+        "to be about to",
+        "reserve (fund)"
       ],
       "audioText": "准备",
       "tags": [
         "daily-life"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          3,
+          4
+        ],
+        "spokenPinyin": "zhǔn bèi",
+        "traceCharacter": "准",
+        "sentence": {
+          "en": "I plan to buy tea tomorrow.",
+          "zh-Hans": "我准备明天去买茶。",
+          "zh-Hant": "我準備明天去買茶。"
+        },
+        "sentencePinyin": "wǒ zhǔn bèi míng tiān qù mǎi chá",
+        "pinyinChoices": [
+          "zhǔn bèi",
+          "zhūn bèi",
+          "zhún bèi",
+          "zhùn bèi",
+          "zhǔn bēi",
+          "zhǔn béi",
+          "zhǔn běi",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "准备 · zhǔn bèi. Listen to the whole word and distinguish each syllable. Context: I plan to buy tea tomorrow.",
+          "zh-Hans": "准备 · zhǔn bèi。注意每个音节的声调和语境。我准备明天去买茶。",
+          "zh-Hant": "準備 · zhǔn bèi。注意每個音節的聲調和語境。我準備明天去買茶。"
+        }
+      }
     },
     {
       "id": "one-cup",
@@ -214,7 +540,36 @@
       "tags": [
         "daily-life"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "ching-original-fixtures",
+      "practice": {
+        "spokenTones": [
+          4,
+          1
+        ],
+        "spokenPinyin": "yì bēi",
+        "traceCharacter": "一",
+        "sentence": {
+          "en": "I only want one cup of tea.",
+          "zh-Hans": "我只要一杯茶。",
+          "zh-Hant": "我只要一杯茶。"
+        },
+        "sentencePinyin": "wǒ zhǐ yào yì bēi chá",
+        "pinyinChoices": [
+          "yì bēi",
+          "yī bēi",
+          "yí bēi",
+          "yǐ bēi",
+          "yì béi",
+          "yì běi",
+          "yì bèi",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "一杯 · yì bēi. 一 changes to fourth tone before the first tone in 杯. Context: I only want one cup of tea.",
+          "zh-Hans": "一杯 · yì bēi。“一”在一声前读四声。我只要一杯茶。",
+          "zh-Hant": "一杯 · yì bēi。「一」在一聲前讀四聲。我只要一杯茶。"
+        }
+      }
     },
     {
       "id": "very-good",
@@ -229,7 +584,36 @@
       "tags": [
         "daily-life"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "ching-original-fixtures",
+      "practice": {
+        "spokenTones": [
+          2,
+          3
+        ],
+        "spokenPinyin": "hén hǎo",
+        "traceCharacter": "很",
+        "sentence": {
+          "en": "This cup of tea is very good.",
+          "zh-Hans": "这杯茶很好。",
+          "zh-Hant": "這杯茶很好。"
+        },
+        "sentencePinyin": "zhè bēi chá hén hǎo",
+        "pinyinChoices": [
+          "hěn hǎo",
+          "hēn hǎo",
+          "hén hǎo",
+          "hèn hǎo",
+          "hěn hāo",
+          "hěn háo",
+          "hěn hào",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "很好 · hěn hǎo. In 很好, the first third tone is spoken as a rising second tone. Context: This cup of tea is very good.",
+          "zh-Hans": "很好 · hěn hǎo。两个三声相连，前一个变为二声。这杯茶很好。",
+          "zh-Hant": "很好 · hěn hǎo。兩個三聲相連，前一個變為二聲。這杯茶很好。"
+        }
+      }
     },
     {
       "id": "consider",
@@ -238,13 +622,44 @@
       "traditional": "考慮",
       "pinyin": "kǎo lǜ",
       "definitions": [
-        "to consider"
+        "to think over",
+        "to consider",
+        "consideration"
       ],
       "audioText": "考虑",
       "tags": [
         "register"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          3,
+          4
+        ],
+        "spokenPinyin": "kǎo lǜ",
+        "traceCharacter": "考",
+        "sentence": {
+          "en": "We need to consider whether this plan is feasible.",
+          "zh-Hans": "我们需要考虑这个方案是否可行。",
+          "zh-Hant": "我們需要考慮這個方案是否可行。"
+        },
+        "sentencePinyin": "wǒ men xū yào kǎo lǜ zhè ge fāng àn shì fǒu kě xíng",
+        "pinyinChoices": [
+          "kǎo lǜ",
+          "kāo lǜ",
+          "káo lǜ",
+          "kào lǜ",
+          "kǎo lǖ",
+          "kǎo lǘ",
+          "kǎo lǚ",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "考虑 · kǎo lǜ. Listen to the whole word and distinguish each syllable. Context: We need to consider whether this plan is feasible.",
+          "zh-Hans": "考虑 · kǎo lǜ。注意每个音节的声调和语境。我们需要考虑这个方案是否可行。",
+          "zh-Hant": "考慮 · kǎo lǜ。注意每個音節的聲調和語境。我們需要考慮這個方案是否可行。"
+        }
+      }
     },
     {
       "id": "deliberate",
@@ -253,13 +668,44 @@
       "traditional": "斟酌",
       "pinyin": "zhēn zhuó",
       "definitions": [
-        "to deliberate carefully"
+        "to consider",
+        "to deliberate",
+        "to fill up a cup to the brim"
       ],
       "audioText": "斟酌",
       "tags": [
         "register"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          1,
+          2
+        ],
+        "spokenPinyin": "zhēn zhuó",
+        "traceCharacter": "斟",
+        "sentence": {
+          "en": "Before replying formally, please weigh your wording carefully.",
+          "zh-Hans": "正式回复之前，请仔细斟酌措辞。",
+          "zh-Hant": "正式回覆之前，請仔細斟酌措辭。"
+        },
+        "sentencePinyin": "zhèng shì huí fù zhī qián qǐng zǐ xì zhēn zhuó cuò cí",
+        "pinyinChoices": [
+          "zhēn zhuó",
+          "zhén zhuó",
+          "zhěn zhuó",
+          "zhèn zhuó",
+          "zhēn zhuō",
+          "zhēn zhuǒ",
+          "zhēn zhuò",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "斟酌 · zhēn zhuó. Listen to the whole word and distinguish each syllable. Context: Before replying formally, please weigh your wording carefully.",
+          "zh-Hans": "斟酌 · zhēn zhuó。注意每个音节的声调和语境。正式回复之前，请仔细斟酌措辞。",
+          "zh-Hant": "斟酌 · zhēn zhuó。注意每個音節的聲調和語境。正式回覆之前，請仔細斟酌措辭。"
+        }
+      }
     },
     {
       "id": "discuss",
@@ -268,13 +714,44 @@
       "traditional": "商量",
       "pinyin": "shāng liang",
       "definitions": [
-        "to discuss together"
+        "to consult",
+        "to talk over",
+        "to discuss"
       ],
       "audioText": "商量",
       "tags": [
         "register"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          1,
+          5
+        ],
+        "spokenPinyin": "shāng liang",
+        "traceCharacter": "商",
+        "sentence": {
+          "en": "I would like to discuss this matter with my family first.",
+          "zh-Hans": "这件事我想先和家人商量一下。",
+          "zh-Hant": "這件事我想先和家人商量一下。"
+        },
+        "sentencePinyin": "zhè jiàn shì wǒ xiǎng xiān hé jiā rén shāng liang yí xià",
+        "pinyinChoices": [
+          "shāng liang",
+          "sháng liang",
+          "shǎng liang",
+          "shàng liang",
+          "shuǐ",
+          "chá",
+          "mǐ",
+          "rén"
+        ],
+        "explanation": {
+          "en": "商量 · shāng liang. Listen to the whole word and distinguish each syllable. Context: I would like to discuss this matter with my family first.",
+          "zh-Hans": "商量 · shāng liang。注意每个音节的声调和语境。这件事我想先和家人商量一下。",
+          "zh-Hant": "商量 · shāng liang。注意每個音節的聲調和語境。這件事我想先和家人商量一下。"
+        }
+      }
     },
     {
       "id": "negotiate",
@@ -283,13 +760,44 @@
       "traditional": "協商",
       "pinyin": "xié shāng",
       "definitions": [
-        "to negotiate"
+        "to consult with",
+        "to talk things over",
+        "agreement"
       ],
       "audioText": "协商",
       "tags": [
         "register"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          2,
+          1
+        ],
+        "spokenPinyin": "xié shāng",
+        "traceCharacter": "协",
+        "sentence": {
+          "en": "Representatives of both sides will negotiate the specific contract terms.",
+          "zh-Hans": "双方代表将协商合同的具体条款。",
+          "zh-Hant": "雙方代表將協商合同的具體條款。"
+        },
+        "sentencePinyin": "shuāng fāng dài biǎo jiāng xié shāng hé tong de jù tǐ tiáo kuǎn",
+        "pinyinChoices": [
+          "xié shāng",
+          "xiē shāng",
+          "xiě shāng",
+          "xiè shāng",
+          "xié sháng",
+          "xié shǎng",
+          "xié shàng",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "协商 · xié shāng. Listen to the whole word and distinguish each syllable. Context: Representatives of both sides will negotiate the specific contract terms.",
+          "zh-Hans": "协商 · xié shāng。注意每个音节的声调和语境。双方代表将协商合同的具体条款。",
+          "zh-Hant": "協商 · xié shāng。注意每個音節的聲調和語境。雙方代表將協商合同的具體條款。"
+        }
+      }
     },
     {
       "id": "decide",
@@ -298,13 +806,43 @@
       "traditional": "決定",
       "pinyin": "jué dìng",
       "definitions": [
-        "to decide"
+        "to decide; to determine; to make up one's mind",
+        "decision (CL:個|个[ge4],項|项[xiang4])"
       ],
       "audioText": "决定",
       "tags": [
         "register"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          2,
+          4
+        ],
+        "spokenPinyin": "jué dìng",
+        "traceCharacter": "决",
+        "sentence": {
+          "en": "After thorough discussion, we decided to postpone the meeting.",
+          "zh-Hans": "经过充分讨论，我们决定推迟会议。",
+          "zh-Hant": "經過充分討論，我們決定推遲會議。"
+        },
+        "sentencePinyin": "jīng guò chōng fèn tǎo lùn wǒ men jué dìng tuī chí huì yì",
+        "pinyinChoices": [
+          "jué dìng",
+          "juē dìng",
+          "juě dìng",
+          "juè dìng",
+          "jué dīng",
+          "jué díng",
+          "jué dǐng",
+          "shuǐ"
+        ],
+        "explanation": {
+          "en": "决定 · jué dìng. Listen to the whole word and distinguish each syllable. Context: After thorough discussion, we decided to postpone the meeting.",
+          "zh-Hans": "决定 · jué dìng。注意每个音节的声调和语境。经过充分讨论，我们决定推迟会议。",
+          "zh-Hant": "決定 · jué dìng。注意每個音節的聲調和語境。經過充分討論，我們決定推遲會議。"
+        }
+      }
     },
     {
       "id": "think-twice",
@@ -313,13 +851,45 @@
       "traditional": "三思而後行",
       "pinyin": "sān sī ér hòu xíng",
       "definitions": [
-        "think twice before acting"
+        "think again and again before acting (idiom); consider carefully in advance"
       ],
       "audioText": "三思而后行",
       "tags": [
         "register"
       ],
-      "sourceId": "ching-original-fixtures"
+      "sourceId": "cc-cedict",
+      "practice": {
+        "spokenTones": [
+          1,
+          1,
+          2,
+          4,
+          2
+        ],
+        "spokenPinyin": "sān sī ér hòu xíng",
+        "traceCharacter": "三",
+        "sentence": {
+          "en": "Faced with such an important choice, we should think carefully before acting.",
+          "zh-Hans": "面对如此重要的选择，我们应当三思而后行。",
+          "zh-Hant": "面對如此重要的選擇，我們應當三思而後行。"
+        },
+        "sentencePinyin": "miàn duì rú cǐ zhòng yào de xuǎn zé wǒ men yīng dāng sān sī ér hòu xíng",
+        "pinyinChoices": [
+          "sān sī ér hòu xíng",
+          "sán sī ér hòu xíng",
+          "sǎn sī ér hòu xíng",
+          "sàn sī ér hòu xíng",
+          "sān sí ér hòu xíng",
+          "sān sǐ ér hòu xíng",
+          "sān sì ér hòu xíng",
+          "sān sī ēr hòu xíng"
+        ],
+        "explanation": {
+          "en": "三思而后行 · sān sī ér hòu xíng. Listen to the whole word and distinguish each syllable. Context: Faced with such an important choice, we should think carefully before acting.",
+          "zh-Hans": "三思而后行 · sān sī ér hòu xíng。注意每个音节的声调和语境。面对如此重要的选择，我们应当三思而后行。",
+          "zh-Hant": "三思而後行 · sān sī ér hòu xíng。注意每個音節的聲調和語境。面對如此重要的選擇，我們應當三思而後行。"
+        }
+      }
     }
   ],
   "sentences": [
@@ -372,6 +942,22 @@
         "decisions"
       ],
       "sourceId": "ching-original-fixtures"
+    },
+    {
+      "id": "tatoeba-hello",
+      "level": "beginner",
+      "simplified": "你好！",
+      "traditional": "你好！",
+      "pinyin": "nǐ hǎo",
+      "translation": {
+        "en": "Hello!",
+        "zh-Hans": "你好！",
+        "zh-Hant": "你好！"
+      },
+      "tags": [
+        "greetings"
+      ],
+      "sourceId": "tatoeba-4869782"
     }
   ],
   "lessons": [

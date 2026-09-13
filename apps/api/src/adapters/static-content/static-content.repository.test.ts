@@ -22,7 +22,7 @@ describe('static content repository', () => {
     expect(repository.lookup('not-a-word')).toEqual([]);
   });
   it('filters sentences by level and tag together', () => {
-    expect(repository.findSentences({})).toHaveLength(3);
+    expect(repository.findSentences({})).toHaveLength(4);
     expect(repository.findSentences({ level: 'intermediate', tag: 'classifiers' }).map(item => item.id)).toEqual(['buy-one-cup']);
     expect(repository.findSentences({ level: 'advanced', tag: 'survival' })).toEqual([]);
   });

@@ -1,0 +1,49 @@
+# CC-CEDICT
+# Community maintained free Chinese-English dictionary.
+# 
+# Published by MDBG
+# 
+# License:
+# Creative Commons Attribution-ShareAlike 4.0 International License
+# https://creativecommons.org/licenses/by-sa/4.0/
+# 
+# Referenced works:
+# CEDICT - Copyright (C) 1997, 1998 Paul Andrew Denisowski
+# 
+# CC-CEDICT can be downloaded from:
+# https://www.mdbg.net/chinese/dictionary?page=cc-cedict
+# 
+# Additions and corrections can be sent through:
+# https://cc-cedict.org/editor/editor.php
+# 
+# For more information about CC-CEDICT see:
+# https://cc-cedict.org/wiki/
+# 
+#! version=1
+#! subversion=0
+#! format=ts
+#! charset=UTF-8
+#! entries=125047
+#! publisher=MDBG
+#! license=https://creativecommons.org/licenses/by-sa/4.0/
+#! date=2026-09-12T07:35:13Z
+#! time=1789198513
+水 水 [Shui3] /surname Shui/Shui ethnic group/
+水 水 [shui3] /water/(after a name) ... River/to swim (used mostly in 會水|会水[hui4 shui3] and 水性[shui3 xing4])/(coll.) lacking in substance; shoddy/(bound form) additional cost; extra income/classifier for washings of a garment/
+茶 茶 [cha2] /tea/tea plant/CL:杯[bei1],壺|壶[hu2]/
+米 米 [Mi3] /surname Mi/
+米 米 [mi3] /uncooked rice/meter (unit of length)/(slang) Chinese yuan/
+人 人 [ren2] /person; people/CL:個|个[ge4],位[wei4],名[ming2]/
+大 大 [da4] /big; large; great/older (than another person)/eldest (as in 大姐[da4 jie3])/greatly; freely; fully/(dialect) father/(dialect) uncle (father's brother)/
+大 大 [dai4] /see 大夫[dai4 fu5]/
+天 天 [tian1] /day/sky/heaven/
+杯子 杯子 [bei1 zi5] /cup/glass/CL:個|个[ge4],隻|只[zhi1]/
+瓶子 瓶子 [ping2 zi5] /bottle/CL:個|个[ge4]/
+購買 购买 [gou4 mai3] /to purchase; to buy/
+準備 准备 [zhun3 bei4] /preparation/to prepare/to intend/to be about to/reserve (fund)/
+考慮 考虑 [kao3 lu:4] /to think over/to consider/consideration/
+斟酌 斟酌 [zhen1 zhuo2] /to consider/to deliberate/to fill up a cup to the brim/
+商量 商量 [shang1 liang5] /to consult/to talk over/to discuss/
+協商 协商 [xie2 shang1] /to consult with/to talk things over/agreement/
+決定 决定 [jue2 ding4] /to decide; to determine; to make up one's mind/decision (CL:個|个[ge4],項|项[xiang4])/
+三思而後行 三思而后行 [san1 si1 er2 hou4 xing2] /think again and again before acting (idiom); consider carefully in advance/
