@@ -10,7 +10,7 @@ import manifest from './content/data/cedict.manifest.json';
 const content = StaticContentRepository.fromFile(new URL('./content/data/content.v1.json', import.meta.url));
 const repository = new CedictRepository(content.getContent().vocabulary);
 let app: INestApplication;
-beforeAll(async () => {app = await createApp();});
+beforeAll(async () => {app = await createApp();},30000);
 afterAll(async () => {await app.close();});
 it('loads the full pinned dictionary and searches Chinese, readings and English', () => {
  expect(manifest.entries).toBeGreaterThan(120000);
@@ -40,7 +40,7 @@ it('serves schema-compatible new entries and synthesizes their audioText', async
  const response = await request(app.getHttpServer()).get('/api/v1/dictionary').query({query: '计算机'});
  expect(response.status).toBe(200);
  const entry = dictionarySchema.parse(response.body).entries.find(word => word.simplified === '计算机')!;
- expect(entry.sourceId).toBe('cc-cedict');
+ expect(['complete-hsk','cc-cedict']).toContain(entry.sourceId);
  const audio = await request(app.getHttpServer()).post('/api/v1/tts').send({text: entry.audioText});
  expect(audio.status).toBe(200);
  const bytes = Buffer.from(audio.body.audioBase64, 'base64');

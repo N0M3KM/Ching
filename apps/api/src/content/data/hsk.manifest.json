@@ -1,0 +1,2027 @@
+{
+  "source": "https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/7ac65bf1a6387d35f1ade478906172a19311c7f9/",
+  "revision": "7ac65bf1a6387d35f1ade478906172a19311c7f9",
+  "edition": "HSK 3.0 (new-1 through new-7; new-7 is levels 7–9)",
+  "sourceSha256": "794aea0b904fa1c5b13d5a70249bc9e1ed41b5777135d93d0543ae0de334f21d",
+  "strokeSha256": "b6c19512960199a1558ef07fd06232c4b72261a3ce30a064a00341ebefb2bb54",
+  "contentSha256": "fddf84be7be8e18d01019f98ec9dd9ba7819eecc50bef91a8337152e6f0c11e5",
+  "contentVersion": "0.1.0",
+  "sourceRecords": 11470,
+  "vocabulary": 10969,
+  "lessons": 457,
+  "strokeCharacters": 2540,
+  "tracks": {
+    "beginner": 1256,
+    "intermediate": 1925,
+    "advanced": 7788
+  },
+  "referenceFallbacks": 10,
+  "excluded": [
+    {
+      "id": "hsk-437683aa833326848f9a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7d6739abb05e10909ca8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-16db59920ea3f284b2ea",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-17efc6654ed280c70117",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5731ab8b1f9020d9377f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-821ea6fd74a74c12dfe8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5de1b913e76a90059b4b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-86f00987511150137192",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8ef85828ff9c38e971b5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-73007de2a43139b7555c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d947cc2e0d9621f8a80e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-86d15422543b83879c97",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4b3510b8d86ea785cca5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c2defdcad3028c95e451",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-872c1fa141b5ed8d2f2b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d6b5711fea6d45301743",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3bfbf21e2f002bc2dcaf",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-fb7335c9afb836c0baf9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0316d311b860e244c45a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8482432c0274b8eefff7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-90ac96a444d7077f023a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b3c33b7abaf01360a71a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1e82f9b0b67529c5bc8e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-51e8a32992e5605a9199",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ebc210e64638f430228a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6cad0bee1332fe926a50",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5f76b2bf82dd2c5d820c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-53258cc4cf99fdea937b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a454f17872a14b8ae11e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-02ea6e1b01e9fc5220d0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-22b3e58190a76bd133d9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2eed009dfe04c32f1fa1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0868fbc8c0bd7ea34040",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2dc3a82fd33a3cba94ed",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b9670616856719e989b6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ccededd38e9c1ea62ffd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5a2e5e4b12a42eb01500",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d0d5cf9f92f5a1e95a85",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-269635727321c64f44eb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c68148826f4c7e0b2fb4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6603e144bd1eded2cf01",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-717a5ee2c7190b378651",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-dbd379b39f0d3537b35b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a22144d42e68f71b0da1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f7c9627a674bb8f4ea89",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1232085ef0d48b89d04a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-23ced888861e7c066ee9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b8c8b39c286bde4f2a44",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-cd4a0eb694b37fa04c65",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d665e5e81ea876939c01",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3b9d237c474e8e35c9d7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c0d44defd3e38ca498c3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-983c9a436768807d72ce",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f6f854a2bc966f15d7b5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-738cf3d291a6d3379ea8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-03a8def408453b97138f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7ae0219da3aead459434",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-40f3d2d8fdbbdc099d17",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9dc4139eaedd31c536c9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1f0193a67ca758d59d3e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8b2d0760b2db6e2747c6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-dda3ed4fc2f4c5dc7b66",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f6cb90f57bc2395829e7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-88a55f8f83864697f3ef",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f2adfafb5b506a8fd92f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ec2299d528cfc715e407",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6dee8e47e0502abf5220",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6d23f04b26967d642071",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-49c138108c80d3d8c98e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4ee37fe6621949f08284",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-40eb5803cacd9a5ea973",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0b5480e007c777a72600",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-777366d06a3115a2bba3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-25334bc5cb1c9d36675d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d4969ce9b57548677273",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2f7be71fe2174743824d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7e82a3544e3570106cf9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-db4f0c68df815a6b8a33",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8a8f1a0cf7cf089aaaaf",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-505da3d2f9cce46bf36a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6cac16b39789379a2515",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b9b9cfb04a025d6dcf53",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c54c6081db4b711ea10a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e8f8f6ff76e3b9d6dfe7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-88ae2acee5526d96fb91",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c714a732998261ddfccd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-04e8fc6f3fb2f8f4e553",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7d24c7722fd02fd4710a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-bd1861fddb3188605098",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c82e0c15fe0eec4d62fe",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-92cecc113a2eeda14054",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-27efc235b012e616c18b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5e374eb90ccb282c9dca",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f80c2e3489f08e1e97da",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c79bb628c7385204205a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1777a1e5f3a54deefe0e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7260e0c3165f6d761399",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d8c812aa9fe2d602dc5f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-44fc3424192d717f893f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2a66145e3b7de5dfb976",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-890e0d58781d3d5afba0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8509abd16c765100145c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a39f2b06b1c438a9bab0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-de576b8e1a03c11f86f1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-cbbe1a7a34a29164bc8e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1ad702b18a4d7bef0c76",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e2fd6979c0a125f8e46a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5e89ef8b2621ad2046b8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-aa3880110720f9c93a19",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b82bd426d2365a2f63f5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-66e830b5690eef238b3f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-79609e2635aa3c9241a6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0e4062a72843c486eea9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c97d929954e82da0fcfe",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d7b7407bf306922f8052",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-71ac430bedb17d9caa89",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-70e372abbae5f619b7e4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f395b3f7a159cf746451",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e06b41623feef441d6a3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0e22c3e402187afc4181",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f9f55d81bbeb4410f396",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-714cac30e2ff8bc9c271",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-453e10482e0034e45b67",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-222bb32d72d583a7b4f7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ba08782b41001a19190c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-03267452f39da765571a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2bec68299f9950c5d975",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d817415648ff8a2feae5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-578a853e50569a9ae966",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-07b42cff4fc907a8bcbb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6ec01c425bc2fc9ce1fd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7e939c61c36bc3e8ad6e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-67d163c409b7614a9f83",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d2cdbb9edb3891052845",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-fcec4480c914d222ae63",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-20fe6e214fb61b0b4ce2",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a9270f7f753924466134",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-17955d83798026b6ef7b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f6368b6045573ad9514a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-380531ddca26b880e2b4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-765e7721e6e211c04bb5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e651a41b058058d1a709",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4f634520e808eba3d32e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c997b4efd20429e5082a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4b86959853ed4cfa2919",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-204efe77a1de4aa2eddc",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d51d25e5a03701368501",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3b7f5f1a9fd8fca16412",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-14c180f6b2b24e04dc1d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4dc3e09cff0ff2d554de",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4060967e9ef29bc943f2",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d66c2075ce9293fdaaa1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-131e4e1270e68813f027",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-994f011158e390753902",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6f23cf1b30cfaa2a8211",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9d09e3e0765a2e8dc190",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-145a35c1fbe30ec81817",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c9f3d9bde30cfbe7be9d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0ace69d1f7ac0548c23f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c5c1ac8be0a7474f7e23",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-64af28c772819137ebc6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c8ffbdf15754d1d22420",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9100b62efb6f78306d7a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8cbd8531f8b0cf4625c9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4d5388a0410de3003b27",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d326edfbf49848d28fbb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-de99296b83c2ad1a0c51",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-da81b5d73883d764255c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-bdcb08e64c2395f55f1b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a3c3a9aa7a88012f5c57",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0e8f2f96e13a8892008c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b3098c786e2039239268",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-14a6657d175c30ff1106",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-da6bf2aae30b18a30cdd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ba8390d3ddde82dd3003",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ae5105499637cf801222",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d1f240318ba862072c5c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-75a581c8ddb7bc32198d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0e97c743f809b0d6df87",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8edbb343ae3429526fcd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c3d9943497f029baa357",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8cabf4496b9656790829",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-06c92ad187d7d2458b80",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f74cddc9293156226055",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4e08fa79c91645076fb8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f847381d37feba9b4b2c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c0c008b3387e1a501f02",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6dc7e46b8e341993411f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-21c04b2eeeb431f7722c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6c553b12d291abfad3a3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-44b7f6877d395a51d3e8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5395e3ee0497fd64f79f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e3f8addbc00c0f73f691",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9365504c523c6135c4dc",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d77229db1716b3e3f9ec",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-dae661d17c2dd8f0ac88",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-82764fc89a5822df8bf0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-72407ec665b596b8ef23",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-22e091c2378c394b6a36",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3a9da6aa3cb924f8af2b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e33b1825b0ec2fc14082",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-672ff7b6de4760746ffd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4bedd74c7d561cbd8e82",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2d38e6841132404eac6b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f867040b5abcad405dd6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-61a642e7aa8670f874d3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c79e23dbe713651dc48a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2adec39aa375d8551956",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-765c450ee572be966b65",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f5cabaa30323e134aabe",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ef33b1c0eb825d6c8b93",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c5557b29b1f85ad58a4b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ee10866ace4f63b0fd88",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1f0ef76de5440ff2d24e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e2652a8f7c8d58178f8c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-428bd551cf33d1fd9e01",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e430d4590fe9229653fb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1f2d24f457a0ffc340f4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-97daa1e1885e23f3ab63",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-981addb8b2732a6c3132",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-bc006debec35a21d9c9d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2bac3ac5028d4c9dd990",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4a9ba6bf4ab3ad3e6769",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4bda402bd5b4c4e3f034",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-048528a4bfb17112a1ed",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-be2f19b924a5a111d476",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-279cc13c25ad302ac4a0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9bbf579ed2e0d1d5f4dc",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0b1fdf18d38810f94827",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-cd47301be6ed06ef6185",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-48f0923f049153aacdd4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ea1ab1b94657fec7c603",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2fdae7149f6e7f2f7f78",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8e1b897dfcdf62290bf9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8518e582c8b4f5af4406",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-392a381b3797f3090c54",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-adaa6eae54b275ecd4e1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e0d274131d16d30e3bd0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b109d9bef1723572841a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-dc06eaa394e09839149b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5553cf6032846b825cd9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5abe12fb7ae495dc3fc4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-67da7a6b7939c0f185e6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-43342ed71b3f9d2e0b22",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7d3c58e30d83bb8f3c21",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-20506b547e77854c1fa7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f17c0463607c041e3b6c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0325124f1a3e0c1e7a34",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b1547b6d3c61b29aa778",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b4266b77b285d6acb1d3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-fe431876a9c3bb8cb6a5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f86c0389d6655e8dbd17",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9db60007db37c6453159",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a1acda33838e0988e738",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3a8c97f04b989f61a12a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-30cdbaaddaf23024665c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-63f08b141e98a3065dc8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7b0355f98bbad6c829cb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-374775c3c812f4064cc1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9d1ca4b9b36174e3bafb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-dc08b79120fa142b6a17",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-970ac0b385c23dd51210",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-addaee8e296fe88da8d8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2a9ec84c2d05a3f61e91",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-538d7aadec30f1a6a305",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e440f765e809fcc48e09",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b9042ade1d569e244d7a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3c15cc95f8c7adc10408",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-34c690fdb96d49ebdfba",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8d361bbed74bbc0468e6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c9b6c1714f05e044e3df",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-79ccba4482c352a92ccd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9276230dd7fbc5507ada",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-257d1936b676340ac5ea",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4e7eedb2d3d5f4d55e2e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-40cb49f9e34e79e284c7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a38b67e752dd435048de",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-deafdd96edaf59aff75d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0aaf1f62f7a179c22cb7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c5a9e91476ba1748a2ab",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c223644322c00ca29c18",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2bf1abb22ec67a8a0691",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a4141bbf2c67f63cca5a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1a52a283f6e7d69d20d0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5c1abf6547a282e36a1a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f9f244eafb3c04696ac5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6b466fe8fac1489f3cfc",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-dac3b1e3415850f35065",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-087d05946b336d16ef1d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5406863988257dc9bf83",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2751a560b39913e2ffde",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-53b9b02546588ba77b20",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-90fdbbe83d6ab4a8bda4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-26badc86c56b87799fe6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3c5c4b5e8518dea19016",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-addf91276cdbc38ae7dc",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a85607ea655f9f8996c6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6320f785a3d8339a0fba",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-773c4da40b5f6e84d577",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-141fb552dd4fdb518922",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7d7889a002872f7e221a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7b42d4f7e1f5fc4b85ea",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d2c46352c5fdde66bc87",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-75a0213c1433dc929d65",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e3ee96095c3279ac49e8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7f2ecefefc5695e0e6e7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-568f4bcad9f27e8c8e17",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-db50fce301fb7fdeffd0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-cbedfc07ba43df867188",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4d5877b23eebe2f8d008",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-389a3f1a1da198141936",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5879e3d460bd9a9113ae",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ae351477d6a670c52a43",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8508c3cec89ffbdf0955",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-202b535597c76e46610c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-19cd93086f8e6a2ebdbf",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-86b5a869bac146d77757",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a649d278fafc74b14c10",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-84598e61cfc4848ede18",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-53647796c4ae9cf42825",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4a8d2e237430c16aff81",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-508bf3307053298f697c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e5d5df34d1161e5a1e5b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-66310877bf78161fe288",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4fb2a721fed18e76d0d3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2a949e6fd47490c8d0bd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e10e2fc43c28e04a4d0a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-38ae1dd0b7f9e1c756d0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5a83d234d397e65c3572",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3f6f5e7886535a294798",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-490eed5f3d71ae1e6e1e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-42870f68c2f5a02ae126",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7e550af3a2ccb9d8203e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-aea7bee2ba7330435c59",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6d756851b92bca10ac74",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0f9e6796f8b21270632e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-43f0a8e31e0a858ceacd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2c0c3b00c0b46bb46385",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-cf9a7fd49cf0e31f29b0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6d85ada319927a73afd7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-394aae9228a753ae0445",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8d2da1bbec24e87ad4ee",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-658d6a0b4de4ea5a6180",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-102e1b22c184fa953f22",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9650d2688efaf32d53b9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ac7ce836857b35472e39",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3279df87a9f1c26f43b6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-22f4a7a6ef5d915f73eb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2feb96bee04956282b7c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-75d50f26c4015c7ee4e8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-bbd6b8313c82df70480a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9a8554ab14d0bcf0aa86",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-699f8829e37357fb86be",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ff07129eacc34d666477",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4bb02aa4d68f9a4786c9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-11ebbc17168369810c8e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0a1452a506fb31f39fb4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4fdf438f047426c47e1a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-07815449cecacbdad4e0",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-91791253726dd4f86019",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-012ac0a62a7327ddd076",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-36a5b494ada43947a6f4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c8c9d8ed490cb09fa51c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9cc21e6246c16735b131",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-fd7a68859e16c009818b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-58292c72f23fc588fd31",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c3036059cf1f1bb44763",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-94e7c36184bb09c51f38",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3f604da7a010de875bed",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f2e51a5d6a3b30eb716e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-cef2afa367d2955fc7fb",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-de23d4b5fb001cdb775f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-afec41492db65ac08877",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7c50a97b07a1ae0bcc77",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d102b777655f1c0ea152",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0f58052da05ac4ec750e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7cd7a8146fca51e07b5f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-33517926747180e6b123",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a85f320dede7c1edf9bd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-93b4330040961b45a085",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6c95ecc4c96ce69d85f8",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-423fa0708d09a58455ee",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b63efcc5f200021c7292",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d114e5cfbbe445dbf527",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a03f695bda6ae02a3b75",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-39f7babe40b602e7604e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5f2731495b7eb62031db",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-af5051f0fff85877dd35",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e0a593cdc6ec87bc7e2e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9857c524b74abb0673df",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-adf7c5116159cca750ee",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b6db7fe102fd411980ca",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2f2b7b30adf3e5a2192d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8244c197a13ce4858013",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1f86a0ae2f970a72afd4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-43f4f9977b49a09188e1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f7e564727552c22c84a3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8cbf4628e3a064e56085",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a3697595d2a68aaa4f17",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4d458bdb6ce0c2f396ef",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b6e6be14a98a4bde0358",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d819c66b2e1734693e2d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a4f64c443f686c7ea8d6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a705d68608ee7e6af03a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-02a083064e684c6c01d9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f8a974cac14d490c70ef",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8e22cd84b9d4f3616cb5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d8cd1acd252fda435f3c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e84e77cf4b98600e141c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-599bd4184ff386f39bef",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-eec32eb1d44634b75ea1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b9b688176b70b183bd21",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c289846e70854b67c29d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d7702e5226e2985a235c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-31950388649a8074eb54",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-279bfd9201a546916722",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4008bec707b5da8466b9",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-edc94d4a210140d5e3d6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0b73566247aa278ed156",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-254b792e59332021e728",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-35993655941bf8893271",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-5c00d7f8c3f0e557925a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0aa607669e1fbc526283",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1ec8faaf0ed29f8f8c05",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3c89c3c769d238143575",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b432f9442d571a443628",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e8d2fb096781bf85a400",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-202e5d3a2f4ad66f70b1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-be9f3750aa0abb4217ff",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f0bee3302c49e76c937d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a0131998c484bca1b703",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0de57e3616b2df85d43e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9de5adfec653fdf275e5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f2cdffa18c9baa379a61",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ceb5b790c464b1830381",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-54899ac8d6964a1414d3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-1850770283a80719db68",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3cd49d309c22f486599d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f41d0c9bcf316a7241d3",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8a356ec0dfde1fd0b965",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b6a9e2510b4dad67994c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-95d1381d2e5808d11540",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-39b5d1d48d441f552a8b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6e21b837d3392377be7c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-eaf54972122d57a7b823",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d9dc1d2fbcde91ce50ed",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8941e676f709e5cbe8b5",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ee72baf3b79ee30f5ff6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-a201c41bfb734da49a3a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3d9187be20dd54333b41",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c32cecf7152431ce52f2",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-365cedd7285981ba5977",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0ebd5ef5dae2b2f86348",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d5dcbe2882d4ef74f189",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2a3a0083db6eaa204ef6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2f8f8f43b02d0fedbf5c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-ae62ee5c893f772090d6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-144ffca120fd7ef26098",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8eff3f9c79e9f4626302",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-9c582d8bcfbcfabb9159",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-77e94773d3353d9a9820",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-372c7283637f2c463b33",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-262bebd65575afab213d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-33286b3835db9b987e4e",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-95df3be874ae92eec44b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6027aba75e3392e18498",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-7c3de251a3ebf20df42b",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c54eb14874bcb49e69d7",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-0720f444bf3a49e842fd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-59c60a1bfdf7be96e482",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b0984e31f5d82839071f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-675f8fc971b140f6cc7a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3e8553f05d09a76495f1",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3e83716747b2b0f95b0d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e431c96e5c99fd775c77",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d9b930784d832adc2cfd",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-e3f2fee23f30ad98fba6",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-2c5255af94ac820eb678",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f37928d073c09868c509",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-bddb37bc502c169c2609",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-4a8d973650cfce4ff3a4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6034c49906bc97b89568",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-440efc3620bd9f0bee21",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-c17845fe581d79e6779c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f96b783946d36b12d34f",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-34f13269da392ffa488d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-563525f4533bdc1a041a",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-66ef93cbefcf25d01500",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-aeb18448bfbc704c9d49",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-91a1dd2531d9e5ebc9f4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-47c30c7437acbe77c48d",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-8641149fcb9e84fb6471",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-f905f230341bed6f1761",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-3e83b6b6fb9f793fdbca",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-d0f7307dd4e2b7f6782c",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-b33188006e309daa2250",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-303206692e59afaa8db4",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-6cf408f344866f4ff8ca",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-57dbea98ae1980ddb795",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-10f7fab47319458d0b61",
+      "reason": "outside-hsk-3.0"
+    },
+    {
+      "id": "hsk-cae974a90990b86b8fca",
+      "reason": "outside-hsk-3.0"
+    }
+  ],
+  "manualOverrides": 0,
+  "enrichment": "Deterministic metalinguistic reading prompts, not sourced natural usage examples. Source reading preserved; adjacent tone sandhi derived."
+}

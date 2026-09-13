@@ -125,6 +125,7 @@ export function validateSeed(input: unknown): ContentSeed {
   uniqueIds(dto.tracks, 'tracks');
   uniqueIds(dto.lessons, 'lessons');
   const vocabularyIds = uniqueIds(dto.vocabulary, 'vocabulary');
+  const vocabularyById = new Map(dto.vocabulary.map(word => [word.id,word]));
   const sentenceIds = uniqueIds(dto.sentences, 'sentences');
   for (const item of [...dto.vocabulary, ...dto.sentences]) {
     if (!sourceIds.has(item.sourceId)) errors.push(`${item.id}: unknown source ${item.sourceId}`);
@@ -146,7 +147,7 @@ export function validateSeed(input: unknown): ContentSeed {
         errors.push(`${lesson.id}.${round.id}: insufficient vocabulary for track choice count`);
       }
       for (const id of round.vocabularyIds) {
-        const word = dto.vocabulary.find(v=>v.id===id);
+        const word = vocabularyById.get(id);
         if (word && !word.practice) errors.push(id+': missing practice content');
         if (word?.practice && !word.practice.pinyinChoices.includes(word.pinyin)) errors.push(id+': pinyin answer absent from choices');
         if (!vocabularyIds.has(id)) errors.push(`${lesson.id}.${round.id}: unknown vocabulary ${id}`);

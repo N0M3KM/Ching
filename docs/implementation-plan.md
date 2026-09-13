@@ -17,4 +17,6 @@ Milestones 1–6 are implemented. The original specification is preserved in [Ch
 
 ## Milestone 7 / release work
 
-A live Azure synthesis smoke test, broader linguistic/curriculum review, deployment configuration and final production sign-off remain. The included content is a small pre-alpha curriculum, not exhaustive HSK coverage. Automated axe checks complement, rather than replace, manual assistive-technology review. No database, account system or server-side user progress has been introduced.
+Live Qwen3-TTS inference/voice review, broader linguistic/curriculum review, deployment configuration and final production sign-off remain. The generated HSK 3.0 curriculum covers 10,969 words in 457 lessons; practice prompts are deterministic reading exercises, not a reviewed natural-usage corpus. Automated axe checks complement, rather than replace, manual assistive-technology review. No database, account system or server-side user progress has been introduced.
+
+Post-milestone updates: the game core now loads the generated HSK snapshot; full CC-CEDICT remains the reference dictionary. Qwen3-TTS (Chinese / Serena / formal narration) is primary with configurable local/Azure fallback. See hsk-pipeline.md and services/qwen-tts/README.md for reproducible data and model setup.

@@ -5,7 +5,7 @@
 | Product | Ching: game-first Mandarin learning web app |
 | Release | `0.0.1` (pre-alpha) |
 | Status | implementation-ready; no database or authentication |
-| Updated | 2026-09-12 |
+| Updated | 2026-09-13 |
 
 ## 1. Product boundary
 
@@ -34,8 +34,8 @@ Ship three distinct tracks: **Beginner**, **Intermediate**, and **Advanced**. Th
 | Validation | `class-validator` / DTOs at every request boundary |
 | Data | Versioned JSON seed files, loaded through repository interfaces |
 | Client state | React state plus browser `localStorage`; never a server-side user store |
-| Libraries | `pinyin-pro`, Hanzi Writer, CC-CEDICT, curated Tatoeba-derived examples |
-| Audio | Server-side TTS adapter; provider chosen by environment |
+| Libraries | `pinyin-pro`, Hanzi Writer, CC-CEDICT (reference dictionary), HSK-based vocabulary pipeline (game core), curated Tatoeba-derived examples |
+| Audio | Server-side TTS adapter; primary provider `QwenLM/Qwen3-TTS` (native Chinese, female, formal narrative voice); provider chosen by environment |
 
 NestJS modules own one responsibility: `CoursesModule`, `MinigamesModule`, `DictionaryModule`, `PinyinModule`, `TtsModule`, `ContentModule`, and `HealthModule`. Controllers use services, services use ports, and ports have static-data implementations in v0.0.1. Do not let controllers read JSON directly.
 
@@ -70,6 +70,8 @@ Every round returns: prompt, permitted answer ids, accessible transcript/pinyin,
 ## 4. Data and persistence
 
 Seed files are immutable application content under `apps/api/src/content/data/`, validated at startup. User data is never written by NestJS in v0.0.1. The client owns a versioned key `ching.progress.v1`; clearing browser storage resets it.
+
+Game-core vocabulary is no longer hand-authored into `content.v1.json`. It is produced by an HSK-based vocabulary pipeline and written into the validated seed files above: Beginner draws from HSK 1–2, Intermediate from HSK 3–4, and Advanced from HSK 5–6+, matching the track table in Section 3. The pipeline populates `simplified`, `traditional`, `pinyin`, `definitions`, and `level` directly from the HSK source dataset, derives `audioText` and tone/trace fields programmatically, and generates or sources the remaining practice enrichment (example sentence, pinyin distractors, explanation) per word. Definitions are cross-checked against the CC-CEDICT reference dictionary served by `DictionaryRepository` (see `docs/audio-and-dictionary.md`) where the HSK source gloss is missing or ambiguous. Hand-authored entries are no longer the default path; they remain supported only as manual overrides for words the pipeline cannot resolve. Re-running the pipeline is a deliberate, reviewed step, not a runtime dependency — see `docs/audio-and-dictionary.md` for the equivalent dictionary-refresh workflow.
 
 ```ts
 type Level = 'beginner' | 'intermediate' | 'advanced';
@@ -141,4 +143,4 @@ A feature is done only when it satisfies its stated acceptance criteria, is isol
 - v0.1.0: add Postgres adapter for progress/content only after the current ports are proven.
 - v0.2.0: add authentication by associating authenticated identity with the existing progress port.
 - v0.3.0: speech recognition/pronunciation scoring behind a separate provider port.
-- Before production: select a licensed TTS provider and verify data-license attribution/redistribution terms for every bundled dataset.
+- Before production: verify `QwenLM/Qwen3-TTS` licensing, attribution, and redistribution terms, verify the HSK vocabulary source dataset's license, and confirm data-license attribution/redistribution terms for every other bundled dataset.

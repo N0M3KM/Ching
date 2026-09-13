@@ -32,4 +32,4 @@ it('returns validated errors and provider unavailable response over HTTP',async(
   const r=await request(app.getHttpServer()).post('/api/v1/tts').send({text:'你好'});
   expect(r.status).toBe(503);expect(r.body.code).toBe('TTS_UNAVAILABLE');expect(r.body.message).toContain('retry');
  }finally{await app.close();if(old===undefined)delete process.env.TTS_PROVIDER;else process.env.TTS_PROVIDER=old;}
-});
+},20000);

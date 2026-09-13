@@ -9,8 +9,9 @@ import { SentencesModule } from './modules/sentences.module.js';
 import { HealthModule } from './modules/health.module.js';
 import { MinigamesModule } from './modules/minigames.module.js';
 import { TtsModule } from './modules/tts.module.js';
+import {StrokesModule} from './modules/strokes.module.js';
 import { ErrorFilter } from './http.js';
-@Module({imports:[ContentModule,CoursesModule,DictionaryModule,PinyinModule,SentencesModule,HealthModule,MinigamesModule,TtsModule]})
+@Module({imports:[ContentModule,StrokesModule,CoursesModule,DictionaryModule,PinyinModule,SentencesModule,HealthModule,MinigamesModule,TtsModule]})
 export class AppModule {}
 export async function createApp(){
  const app=await NestFactory.create(AppModule,{logger:false,abortOnError:false});

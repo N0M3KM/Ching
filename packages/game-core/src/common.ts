@@ -12,6 +12,7 @@ export function choices(labels:readonly string[],correct:string,count:number,rng
  const options=shuffle(unique,rng).map((label,i)=>({id:'a'+i,label:local(label,label)}));
  return {options,permittedAnswerIds:options.map(o=>o.id),correctAnswerId:options.find(o=>o.label.en===correct)!.id};
 }
+const wordIndexes = new WeakMap<ContentSeed,Map<string,Vocabulary>>();
 export abstract class BaseEngine implements GameEngine {
  abstract readonly game:GameType;
  abstract build(word:Vocabulary,pool:readonly Vocabulary[],lesson:Lesson,rng:()=>number):Omit<BuiltRound,'id'>;
@@ -20,7 +21,8 @@ export abstract class BaseEngine implements GameEngine {
   if(!Number.isInteger(seed)||seed<0||seed>4294967295)throw new GameInputError('Seed must be an unsigned 32-bit integer.');
   const template=lesson.rounds.find(r=>r.game===this.game);
   if(!template)throw new GameInputError('Game is not available in this lesson.');
-  const pool=template.vocabularyIds.map(id=>content.vocabulary.find(v=>v.id===id)).filter((v):v is Vocabulary=>Boolean(v));
+  let index=wordIndexes.get(content);if(!index){index=new Map(content.vocabulary.map(word=>[word.id,word]));wordIndexes.set(content,index);}
+  const pool=template.vocabularyIds.map(id=>index.get(id)).filter((v):v is Vocabulary=>Boolean(v));
   if(pool.length<DIFFICULTY[lesson.track].choiceCount)throw new GameInputError('Invalid content pool.');
   const rng=random(seed);const ordered=shuffle(pool,rng);
   const rounds=Array.from({length:DIFFICULTY[lesson.track].roundCount},(_,i)=>({...this.build(ordered[i%ordered.length]!,pool,lesson,rng),id:'r'+i}));

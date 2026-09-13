@@ -6,6 +6,7 @@ import type {TtsRequest,TtsResponse} from '@ching/contracts';
 import {TTS_PROVIDER} from '../ports/tts-provider.js';
 import type {TtsProvider} from '../ports/tts-provider.js';
 import {AzureTtsProvider,UnavailableTtsProvider} from '../adapters/azure-tts.provider.js';
+import {QwenTtsProvider,FallbackTtsProvider} from '../adapters/qwen-tts.provider.js';
 import {LocalTtsProvider} from '../adapters/local-tts.provider.js';
 import {DtoPipe} from '../http.js';
 class TtsDto implements TtsRequest {
@@ -48,11 +49,19 @@ class TtsController {
 }
 @Module({controllers:[TtsController],providers:[
  {provide:TTS_PROVIDER,useFactory:()=>{
-  const provider=process.env.TTS_PROVIDER??'local';
+  const provider=process.env.TTS_PROVIDER??'qwen3';
+  if(provider==='qwen3'){
+   const qwen=new QwenTtsProvider(process.env.QWEN_API_BASE_URL??'http://127.0.0.1:8000',process.env.QWEN_API_KEY??'');
+   const fallback=process.env.QWEN_FALLBACK_PROVIDER??'local';
+   if(fallback==='disabled')return qwen;
+   if(fallback==='local')return new FallbackTtsProvider(qwen,new LocalTtsProvider());
+   if(fallback==='azure')return new FallbackTtsProvider(qwen,new AzureTtsProvider(process.env.AZURE_SPEECH_KEY??'',process.env.AZURE_SPEECH_REGION??''));
+   throw new Error('Unknown QWEN_FALLBACK_PROVIDER');
+  }
   if(provider==='local')return new LocalTtsProvider();
   if(provider==='azure')return new AzureTtsProvider(process.env.AZURE_SPEECH_KEY??'',process.env.AZURE_SPEECH_REGION??'');
   if(provider==='disabled')return new UnavailableTtsProvider();
-  throw new Error('Unknown TTS_PROVIDER. Use local, azure, or disabled.');
+  throw new Error('Unknown TTS_PROVIDER. Use qwen3, local, azure, or disabled.');
  }},
  TtsService,
 ],exports:[TtsService]})

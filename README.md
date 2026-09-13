@@ -15,7 +15,7 @@ npm run dev
 
 Open [Ching](http://127.0.0.1:5174). Vite runs on port 5174 and proxies the Nest API on port 3001. Both bind to the local machine. `npm run build` checks compilation and creates the production client under `apps/web/dist`; server deployment packaging is a separate release task.
 
-Mandarin audio works locally without credentials. For optional Azure neural voices, copy `.env.example` to `.env`, set `TTS_PROVIDER=azure`, `AZURE_SPEECH_REGION` and `AZURE_SPEECH_KEY`, then restart. See [audio and full dictionary setup](docs/audio-and-dictionary.md).
+Qwen3-TTS is the primary Mandarin provider, using native Chinese female Serena with formal narration. Start the [Qwen service](services/qwen-tts/README.md); local speech remains the offline fallback. For optional Azure neural voices, copy `.env.example` to `.env`, set `TTS_PROVIDER=azure`, `AZURE_SPEECH_REGION` and `AZURE_SPEECH_KEY`, then restart. See [audio and full dictionary setup](docs/audio-and-dictionary.md).
 
 ## Verify
 
@@ -33,7 +33,7 @@ Tests and browser downloads use ignored `.tmp` and `.cache` directories in this 
 - `packages/game-core`: independent deterministic engines and shared scoring.
 - `apps/api/src/modules`: Nest controllers/services; no JSON reads in controllers.
 - `apps/api/src/ports`: ContentRepository, TtsProvider and the future ProgressRepository seam.
-- `apps/api/src/adapters`: immutable lesson content, full CC-CEDICT reference, and local/Azure TTS.
+- `apps/api/src/adapters`: generated HSK lesson content, full CC-CEDICT reference, and Qwen/local/Azure TTS.
 - `apps/api/src/content/data`: versioned validated seeds.
 - `apps/web/src`: React renderers, runtime payload validation and local ProgressStore adapter.
 
@@ -44,3 +44,5 @@ Read [the specification](docs/Ching-Specification.md), [implementation status](d
 ## Git workflow
 
 Feature branches now share the real `main` ancestor. See [the repair record](docs/git-history-repair.md). Branch from fetched `main` or a deliberate dependency branch; use Conventional Commits, one feature PR at a time, CI/review and squash merge. Do not initialize a second independent history. No database, authentication or server-side user persistence belongs in this release.
+
+Game vocabulary comes from the pinned HSK 3.0 pipeline: 10,969 words across 457 lessons. Run npm run vocabulary:import to regenerate compressed seeds and stroke data. The old content.v1.json is retained only for legacy tests; it is not loaded by the application. See [pipeline provenance](docs/hsk-pipeline.md).

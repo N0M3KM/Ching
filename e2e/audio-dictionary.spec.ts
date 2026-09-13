@@ -26,7 +26,7 @@ test('full dictionary audio decodes, plays, and replays without another request'
 });
 test('lesson playback succeeds and leaving the round stops it', async ({page}) => {
  await page.goto('/');
- await page.getByRole('button', {name:/Listen & Pick/}).click();
+ await page.getByRole('button', {name:/Listen & Pick/}).first().click();
  await page.getByRole('button', {name:'Let’s play'}).click();
  await page.getByRole('button', {name:'Play audio'}).click();
  const audio = page.locator('audio');

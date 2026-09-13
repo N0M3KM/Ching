@@ -7,3 +7,5 @@
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 .panel .round-heading{font-size:22px;line-height:1.5;letter-spacing:-.6px;max-width:680px}
+
+.course-intro label[for="hsk-lesson"]{display:block;margin:.75rem 0 .4rem}#hsk-lesson{max-width:100%}

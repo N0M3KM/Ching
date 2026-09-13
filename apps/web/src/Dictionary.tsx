@@ -72,7 +72,7 @@ export function Dictionary({ locale }: DictionaryProps) {
 function DictionaryEntry({ entry, locale }: { entry: Entry; locale: Locale }) {
   const isTraditional = locale === 'zh-Hant';
   const headword = isTraditional ? (entry.traditional ?? entry.simplified) : entry.simplified;
-  const sourceLabel = entry.sourceId === 'cc-cedict' ? 'CC-CEDICT · CC BY-SA 4.0' : 'Ching';
+  const sourceLabel = entry.sourceId === 'cc-cedict' ? 'CC-CEDICT · CC BY-SA 4.0' : entry.sourceId === 'complete-hsk' ? 'Complete HSK · MIT; CC-CEDICT definitions · CC BY-SA 4.0' : 'Ching';
 
   return (
     <article className="dictionary-entry">
