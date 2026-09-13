@@ -1,24 +1,26 @@
 # Architecture decisions
 
-The source specification was supplied at `D:/13Games/Ching-Specification.md` (updated 2026-09-12). Its product and engineering requirements govern the project. This first feature implements the shared contracts and static repository, not the full release.
+The [specification](Ching-Specification.md) governs the implementation. Milestones 1–6 are implemented; live provider and production release verification remain separate.
 
 ## Boundaries
 
-The future request path is React → NestJS controller → application service → repository/provider port → adapter. Controllers must not read JSON. Construct `StaticContentRepository.fromFile(...)` while initializing `ContentModule`, so invalid content prevents readiness. Its constructor validates unknown input with class-validator DTOs, then checks references and freezes the complete object graph. Unknown properties and null optional strings are rejected.
+React → Nest controller → application service → repository/provider interface → adapter. Controllers do not read JSON. ContentModule constructs StaticContentRepository at startup; class-validator checks shape, reference checks catch broken IDs, and the object graph is frozen before readiness succeeds. All HTTP request bodies, queries and route parameters use explicit DTO pipes. Explicit pipe types and injected tokens keep validation and injection independent of transpiler metadata.
 
-All public payloads live in `@ching/contracts`, with no framework imports. `GameEngine` lives in `@ching/game-core`; each game gets a separate implementation and registration in `MinigamesModule`. `ProgressRepository` has no server implementation in this release. The web application will implement `ProgressStore` with the exact key `ching.progress.v1` and validate storage reads.
+Public contracts live in `@ching/contracts`, without framework imports. Each game implements `GameEngine` in `@ching/game-core`. The common engine base owns seeded selection and grading mechanics; each concrete engine owns its own prompts and answer construction. `ProgressRepository` remains an unimplemented future server seam. The browser implements `ProgressStore` and validates storage/API payloads before use.
 
-## Recorded interpretations
+## Decisions
 
-1. **Round counts:** the general 3–6 round description conflicts with the explicit 5/8/10 completion table. The table takes precedence. `Lesson.rounds` contains content templates, not an already generated session. An engine generates the required count from the matching template pools and seed.
-2. **Difficulty defaults:** intermediate uses 4 choices and 25 seconds; advanced uses 6 choices and 15 seconds. These are within the stated ranges. Completion thresholds are fractions (0.70/0.75/0.80), independent of speed bonus. At five rounds, beginner needs four correct answers.
-3. **Stateless grading:** the planned session ID should encode the content/engine version, lesson, game, and seed within a bounded validated format. Grading regenerates the session; it must never trust a client-supplied answer key or require a user/session database. Version changes must produce an explicit expired-session error when regeneration is unsupported. The ID format and HTTP DTOs remain work for the minigame API feature.
-4. **Content provenance:** original fixtures are labeled explicitly. Required CC-CEDICT and Tatoeba imports remain pending, with attribution retained per record. Do not claim these development fixtures came from either dataset.
-5. **Pronunciation:** lexical pinyin and spoken sandhi require deliberate game rules. For example, 很好 needs spoken third-tone sandhi in Tone Match. Stored pinyin alone is not an answer key. Advanced contextual tone and trace rules require dedicated fixtures before those games can ship.
-6. **Localization:** localized UI strings require English, Simplified Chinese, and Traditional Chinese. Mandarin transcripts and lexical pinyin remain Mandarin content. The current validator verifies presence, not linguistic accuracy.
+1. **Round counts:** the table's 5/8/10 counts take precedence over the conflicting general 3–6 description. Lesson rounds describe template pools; engines generate the track's session count.
+2. **Difficulty:** beginner has two choices and no timer; intermediate has four choices and 25 seconds; advanced has six choices and 15 seconds. Thresholds are 0.70/0.75/0.80. Score is correct answers plus speed bonus; completion never depends on the bonus. Late timed answers are incorrect.
+3. **Stateless sessions:** IDs encode `c1~contentVersion~lessonId~game~seed`. Grading reconstructs rounds and answer keys from validated input and immutable content. Unknown versions return SESSION_EXPIRED. Partial submissions support immediate feedback; completion requires all answers. There is no server session or user store.
+4. **Pinyin:** lexical pinyin remains separate from spoken tone sequences. Curated spoken-tone fixtures include 很好 → 2/3 and 一杯 → 4/1. Contexts, register and near-tone distractors scale by level.
+5. **Tracing:** local Hanzi Writer assets support animation and pointer quizzes. Watching the stroke sequence with the keyboard unlocks identification as an accessible alternative to drawing. Beginner shows outlines; higher tracks reduce guidance; advanced hides the character after animation for recall.
+6. **Progress:** the exact key is `ching.progress.v1`. A lesson completes after all four games pass. Same-seed replays record improved completion and only the increase in best XP. XP history is bounded to 5,000 session IDs and is display-only. Streaks follow local calendar days. Blocked/corrupt storage falls back to memory with a visible message.
+7. **TTS:** only the server reads Azure credentials. Limits: 200 text characters, approved voices, eight-second deadline, 12 requests/client/minute, four concurrent uncached calls, 128 cache entries, five-minute TTL, two-megabyte provider audio limit. Cache keys hash text and voice. Failure returns a retry message with a transcript alternative.
+8. **Localization/accessibility:** English, Simplified and Traditional UI strings share a typed copy structure. Mandarin learning content stays Mandarin. Warm-orange tokens are preserved; darker orange supports readable small white button text. Games use native keyboard controls, visible focus, text feedback and audio transcripts.
 
-## Next boundaries
+## Data and dependencies
 
-The API feature must introduce NestJS modules, request DTOs on all parameters/query/body boundaries, `/api/v1` routing, and `{ code, message, details? }` errors. Health remains `/healthz`. The TTS feature must select a server-only provider via environment and implement timeout/cancellation, text limits, rate limiting, and a bounded TTL cache keyed by text and voice. An unavailable provider must produce an accessible retry message, not simulated audio.
+CC-CEDICT, Tatoeba and stroke-data attribution are documented in [content provenance](content-provenance.md). Import tools are authoring-only and must not run automatically at server startup. Curriculum fluency still requires human review.
 
-The UI must use React, TypeScript, Tailwind, warm-orange spec tokens, visible focus, 44px targets, text feedback, transcripts, and tested AA contrast. The primary orange token should not be assumed to support small white text without contrast verification.
+The root dependency override pins Nest's transitive Multer to the patched 2.3 line; no file-upload route is enabled. The clean lockfile installs successfully with `npm ci` and reports zero npm audit advisories. npm may label the overridden version invalid against Nest's original exact 2.2.0 declaration in `npm ls`; retain the explicit override rather than restoring the vulnerable version.

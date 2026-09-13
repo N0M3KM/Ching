@@ -21,3 +21,13 @@ it('increments streak on consecutive local calendar days and resets after a gap'
  p=recordResult(p,session('tone-match','d'),result('d'),new Date(2026,8,15));expect(p.streak).toBe(1);
 });
 it('rejects partial results',()=>{expect(()=>recordResult(emptyProgress(),session('tone-match','a'),{...result('a'),rounds:[]})).toThrow();});
+
+it('a successful retry improves completion and credits only the XP difference',()=>{
+ const s=session('tone-match','retry');
+ const failed={...result('retry'),completed:false,earnedXp:0,rounds:[{...result('retry').rounds[0]!,correct:false}]};
+ let p=recordResult(emptyProgress(),s,failed);
+ expect(p.completedGameKeys).toEqual([]);expect(p.review.water).toBeDefined();
+ p=recordResult(p,s,result('retry'));
+ expect(p.completedGameKeys).toContain('beginner-01|tone-match');expect(p.xp).toBe(10);expect(p.review.water).toBeUndefined();
+ expect(recordResult(p,s,result('retry')).xp).toBe(10);
+});

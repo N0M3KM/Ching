@@ -1,3 +1,4 @@
+import type { LocalProgress } from '@ching/contracts';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { GAME_TYPES, LOCALES } from '@ching/contracts';
 import type {
@@ -11,7 +12,7 @@ import type {
   TrackSummary,
 } from '@ching/contracts';
 
-import { api, lessonSchema, resultSchema, sessionSchema, tracksSchema } from './schemas.js';
+import { api, lessonSchema, sessionResultSchema, sessionSchema, tracksSchema } from './schemas.js';
 import { copy, gameHint, gameName } from './i18n.js';
 import { emptyProgress, LocalStorageProgressStore, recordResult } from './progress.js';
 import { Round } from './Round.js';
@@ -128,7 +129,7 @@ export default function App() {
       if (!session) throw new Error('Missing active session');
 
       const endpoint = `minigames/sessions/${encodeURIComponent(session.id)}/grade`;
-      const response = await api(endpoint, resultSchema, { answers: [roundAnswer] });
+      const response = await api(endpoint, sessionResultSchema, { answers: [roundAnswer] });
 
       setFeedback(response.rounds[0]!);
       setAnswers((prev) => [...prev.filter((a) => a.roundId !== roundAnswer.roundId), roundAnswer]);
@@ -149,7 +150,7 @@ export default function App() {
     setError(false);
     try {
       const endpoint = `minigames/sessions/${encodeURIComponent(session.id)}/grade`;
-      const finishedResult = await api(endpoint, resultSchema, { answers });
+      const finishedResult = await api(endpoint, sessionResultSchema, { answers });
       const updatedProgress = recordResult(progress, session, finishedResult);
 
       store.save(updatedProgress);
@@ -379,9 +380,9 @@ function LearnScreen({
 }: {
   copyText: ReturnType<typeof copy>;
   locale: Locale;
-  progress: any;
+  progress: LocalProgress;
   tracks: readonly TrackSummary[];
-  activeTrack?: TrackSummary;
+  activeTrack?: TrackSummary | undefined;
   activeTrackIndex: number;
   busy: boolean;
   onSelectTrack: (index: number) => void;
@@ -563,7 +564,7 @@ function PlayScreen({
   feedback: RoundResult | null;
   busy: boolean;
   onNavigate: (screen: 'learn') => void;
-  onAnswer: (a: RoundAnswer) => void;
+  onAnswer: (a: RoundAnswer) => Promise<void>;
   onNextRound: () => void;
 }) {
   return (
@@ -675,7 +676,7 @@ function ReviewScreen({
   onNavigate,
 }: {
   copyText: ReturnType<typeof copy>;
-  progress: any;
+  progress: LocalProgress;
   onNavigate: (screen: 'learn') => void;
 }) {
   const reviewCards = Object.values(progress.review) as Array<{ vocabularyId: string; mistakes: number }>;

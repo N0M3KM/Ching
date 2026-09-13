@@ -30,7 +30,7 @@ export function Round({round,game,level,locale,feedback,onAnswer,onNext,last}:{r
  const disabled=busy||Boolean(feedback)||pending.current!==null;
  return <div className="round-body">
   <div className="round-top"><span className="eyebrow">{c.study}</span><span className="timer" role="timer">{remaining===null?c.untimed:remaining+' '+c.seconds}</span></div>
-  <h2>{round.prompt[locale]}</h2>
+  <h1 className="round-heading">{round.prompt[locale]}</h1>
   <div className="audio-row"><button onClick={()=>void play()} disabled={audioBusy}>{audioBusy?c.loading:'▷ '+c.play}</button>
    {audioUrl?<audio ref={audio} controls autoPlay src={audioUrl} aria-label={c.play}/>:null}</div>
   {audioError?<p role="alert" className="notice">{c.audioError}</p>:null}

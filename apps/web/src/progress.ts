@@ -8,7 +8,7 @@ const schema=z.object({
  schemaVersion:z.literal(1),completedLessonIds:z.array(stringId).max(5000),
  xp:z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER),streak:z.number().int().nonnegative().max(100000),
  review:z.record(z.string().regex(/^[a-z0-9-]+$/),z.object({vocabularyId:stringId,mistakes:z.number().int().nonnegative(),lastReviewedAt:z.iso.datetime()})),
- lastActivityDate:date.optional(),completedGameKeys:z.array(stringId).max(5000).optional(),awardedSessionIds:z.array(stringId).max(5000).optional(),
+ sessionXp:z.record(stringId,z.number().int().nonnegative()).refine(v=>Object.keys(v).length<=5000).optional(),lastActivityDate:date.optional(),completedGameKeys:z.array(stringId).max(5000).optional(),awardedSessionIds:z.array(stringId).max(5000).optional(),
 }).strict();
 export const emptyProgress=():LocalProgress=>({schemaVersion:1,completedLessonIds:[],xp:0,streak:0,review:{},completedGameKeys:[],awardedSessionIds:[]});
 export class LocalStorageProgressStore implements ProgressStore {
@@ -30,7 +30,11 @@ export class LocalStorageProgressStore implements ProgressStore {
 function calendarDate(now:Date){return [now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');}
 export function recordResult(progress:LocalProgress,session:GameSession,result:SessionResult,now=new Date()):LocalProgress{
  if(result.sessionId!==session.id||result.rounds.length!==session.rounds.length)throw new Error('Only finished sessions may be saved.');
- if(progress.awardedSessionIds?.includes(session.id))return progress;
+ const previouslyAwarded=progress.awardedSessionIds?.includes(session.id)??false;
+ const previousXp=progress.sessionXp?.[session.id]??(previouslyAwarded?result.earnedXp:0);
+ const creditedXp=Math.max(0,result.earnedXp-previousXp);
+ const sessionIds=[...new Set([...(progress.awardedSessionIds??[]),session.id])].slice(-5000);
+ const sessionXp=Object.fromEntries(sessionIds.map(id=>[id,id===session.id?Math.max(previousXp,result.earnedXp):progress.sessionXp?.[id]??0]));
  const gameKeys=new Set(progress.completedGameKeys??[]);
  if(result.completed)gameKeys.add(session.lessonId+'|'+session.game);
  const lessons=new Set(progress.completedLessonIds);
@@ -38,9 +42,9 @@ export function recordResult(progress:LocalProgress,session:GameSession,result:S
  const review:Record<string,ReviewCard>={...progress.review};
  for(const round of result.rounds){
   if(round.correct){delete review[round.vocabularyId];}
-  else{review[round.vocabularyId]={vocabularyId:round.vocabularyId,mistakes:(review[round.vocabularyId]?.mistakes??0)+1,lastReviewedAt:now.toISOString()};}
+  else if(!previouslyAwarded){review[round.vocabularyId]={vocabularyId:round.vocabularyId,mistakes:(review[round.vocabularyId]?.mistakes??0)+1,lastReviewedAt:now.toISOString()};}
  }
  const today=calendarDate(now);const yesterday=new Date(now);yesterday.setDate(yesterday.getDate()-1);
  const streak=progress.lastActivityDate===today?progress.streak:progress.lastActivityDate===calendarDate(yesterday)?progress.streak+1:1;
- return {schemaVersion:1,completedLessonIds:[...lessons],completedGameKeys:[...gameKeys],awardedSessionIds:[...(progress.awardedSessionIds??[]),session.id].slice(-5000),xp:progress.xp+result.earnedXp,streak,lastActivityDate:today,review};
+ return {schemaVersion:1,completedLessonIds:[...lessons],completedGameKeys:[...gameKeys],awardedSessionIds:sessionIds,sessionXp,xp:progress.xp+creditedXp,streak,lastActivityDate:today,review};
 }

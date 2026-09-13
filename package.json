@@ -1,54 +1,58 @@
 {
-    "name":  "ching",
-    "version":  "0.0.1",
-    "private":  true,
-    "description":  "Game-first Mandarin learning เน€เธยเนยเธเนโฌย local progress, static content",
-    "engines":  {
-                    "node":  "\u003e=24"
-                },
-    "workspaces":  [
-                       "apps/*",
-                       "packages/*"
-                   ],
-    "scripts":  {
-                    "build":  "tsc -b \u0026\u0026 vite build --config apps/web/vite.config.mts apps/web",
-                    "typecheck":  "tsc --noEmit -p tsconfig.json",
-                    "lint":  "eslint . --max-warnings 0",
-                    "test":  "vitest run",
-                    "test:watch":  "vitest",
-                    "content:validate":  "tsx apps/api/src/content/validate.ts",
-                    "check":  "node scripts/run-check.mjs",
-                    "check:inner":  "npm run lint \u0026\u0026 npm run typecheck \u0026\u0026 npm test \u0026\u0026 npm run build \u0026\u0026 npm run content:validate",
-                    "dev":  "node scripts/runtime.mjs dev",
-                    "dev:api":  "tsx watch --env-file-if-exists=.env apps/api/src/main.ts",
-                    "dev:web":  "vite --config apps/web/vite.config.mts apps/web",
-                    "test:e2e":  "node scripts/runtime.mjs e2e",
-                    "dev:inner":  "concurrently -k \"npm:dev:api\" \"npm:dev:web\"",
-                    "test:e2e:inner":  "playwright test"
-                },
-    "devDependencies":  {
-                            "@axe-core/playwright":  "^4.13.0",
-                            "@eslint/js":  "^10.0.1",
-                            "@playwright/test":  "^1.63.0",
-                            "@tailwindcss/vite":  "^4.3.3",
-                            "@types/express":  "^5.0.6",
-                            "@types/node":  "^24.0.0",
-                            "@types/react":  "^19.3.0",
-                            "@types/react-dom":  "^19.3.0",
-                            "@types/supertest":  "^7.2.1",
-                            "@vitejs/plugin-react":  "^6.1.1",
-                            "agent-browser":  "^0.37.1",
-                            "concurrently":  "^10.0.5",
-                            "eslint":  "^10.10.0",
-                            "supertest":  "^7.2.2",
-                            "tailwindcss":  "^4.3.3",
-                            "tsx":  "^4.20.0",
-                            "typescript":  "~5.9.3",
-                            "typescript-eslint":  "^8.70.0",
-                            "vite":  "^8.3.0",
-                            "vitest":  "^4.1.11"
-                        },
-    "overrides":  {
-                      "multer":  "^2.3.0"
-                  }
+  "name": "ching",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Game-first Mandarin learning with local progress and static content",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b && vite build --config apps/web/vite.config.mts apps/web",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "content:validate": "tsx apps/api/src/content/validate.ts",
+    "check": "node scripts/run-check.mjs",
+    "check:inner": "npm run lint && npm run typecheck && npm test && npm run build && npm run content:validate",
+    "dev": "node scripts/runtime.mjs dev",
+    "dev:api": "tsx watch --env-file-if-exists=.env apps/api/src/main.ts",
+    "dev:web": "vite --config apps/web/vite.config.mts apps/web",
+    "test:e2e": "node scripts/runtime.mjs e2e",
+    "dev:inner": "concurrently -k \"npm:dev:api\" \"npm:dev:web\"",
+    "test:e2e:inner": "playwright test",
+    "browser:install": "node scripts/browser-install.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/supertest": "^7.2.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "agent-browser": "^0.37.1",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.10.0",
+    "supertest": "^7.2.2",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.70.0",
+    "vite": "^8.3.0",
+    "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "multer": "^2.3.0",
+    "@nestjs/platform-express": {
+      "multer": "2.3.0"
+    }
+  }
 }

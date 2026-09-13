@@ -157,6 +157,7 @@ export interface ReviewCard {
   readonly lastReviewedAt: string;
 }
 export interface LocalProgress {
+  readonly sessionXp?: Readonly<Record<string, number>> | undefined;
   readonly lastActivityDate?: string | undefined;
   readonly completedGameKeys?: readonly string[] | undefined;
   readonly awardedSessionIds?: readonly string[] | undefined;

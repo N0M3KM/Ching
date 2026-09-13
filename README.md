@@ -2,35 +2,45 @@
 
 A lightweight showcase demonstrating GPT-6 Astra performance, guided by Specification Engineering.
 
-Game-first Mandarin learning, targeting **0.0.1 pre-alpha**. No database, authentication, or server-side user persistence.
+Ching is a game-first Mandarin learning app targeting **0.0.1 pre-alpha**. Three tracks offer Tone Match, Pinyin Match, Listen & Pick and Character Trace. Progress lives only in the browser.
 
-This repository starts with the specification's first milestone: **contracts and static content**. It is a tested foundation, not yet a playable app. React/Tailwind screens, NestJS routes, game engines, audio, and browser persistence are subsequent milestones.
+## Run locally
 
-## Run the foundation
-
-Requires Node.js 24 or newer and npm. Node 24 is used in CI.
+Requires Node.js 24 and npm.
 
 ```sh
 npm ci
-npm run check
+npm run dev
 ```
 
-`check` runs lint, strict typechecking, unit tests, compilation, and seed validation. For content authoring, use `npm run content:validate`; for iterative tests, use `npm run test:watch`.
+Open [Ching](http://127.0.0.1:5174). Vite runs on port 5174 and proxies the Nest API on port 3001. Both bind to the local machine. `npm run build` checks compilation and creates the production client under `apps/web/dist`; server deployment packaging is a separate release task.
 
-## Layout
+For live audio, copy `.env.example` to `.env`, set `TTS_PROVIDER=azure`, `AZURE_SPEECH_REGION` and `AZURE_SPEECH_KEY`, then restart. Provider credentials stay server-side. Without them, games provide transcripts and an audio retry message; no substitute audio is fabricated.
 
-- `packages/contracts`: framework-free types for API, games, content, local progress, and track difficulty.
-- `packages/game-core`: the `GameEngine` extension interface; implementations follow in individual features.
-- `apps/api/src/ports`: content, future progress, and TTS interfaces.
-- `apps/api/src/adapters/static-content`: immutable JSON repository with startup validation.
-- `apps/api/src/content/data`: versioned development seeds for three tracks.
-- `apps/web/src/ports`: browser `ProgressStore` boundary; no storage implementation yet.
-- `docs`: architecture decisions, content provenance, and implementation checklist.
+## Verify
 
-Packages are private, source-first workspaces. Compilation checks the foundation and emits declarations; `dist` is not yet a deployable server or website. API/web build entry points will be introduced with those features.
+```sh
+npm run check
+npm run browser:install
+npm run test:e2e
+```
 
-Read [the supplied specification](docs/Ching-Specification.md), [the implementation plan](docs/implementation-plan.md), [architecture decisions](docs/architecture.md), and [content provenance](docs/content-provenance.md) before extending this foundation.
+Tests and browser downloads use ignored `.tmp` and `.cache` directories in this workspace. `check` runs lint, strict typechecking, unit/integration tests, the client build and seed validation. E2E checks use real local API routes, all four games in all three tracks, results, reload retention, keyboard stroke animation, mobile layout, localization, axe and retry recovery.
 
-## Contributing
+## Structure
 
-Use a short-lived feature branch and one feature per PR, Conventional Commits, and squash merge after CI and review. The initial branch is `feat/contracts-and-static-content`. Never introduce accounts, a database, or server-side user writes for 0.0.1.
+- `packages/contracts`: framework-free API/game/content/progress contracts.
+- `packages/game-core`: independent deterministic engines and shared scoring.
+- `apps/api/src/modules`: Nest controllers/services; no JSON reads in controllers.
+- `apps/api/src/ports`: ContentRepository, TtsProvider and the future ProgressRepository seam.
+- `apps/api/src/adapters`: immutable static content and Azure TTS.
+- `apps/api/src/content/data`: versioned validated seeds.
+- `apps/web/src`: React renderers, runtime payload validation and local ProgressStore adapter.
+
+The key `ching.progress.v1` stores display-only XP, lesson/game completion, review cards and calendar streaks. Complete all four games to finish a lesson. Same-seed retries credit only improved XP and can turn a failed game into a completed one. Reset removes this app's progress key. If storage is blocked or corrupt, the UI warns and retains progress for the current visit.
+
+Read [the specification](docs/Ching-Specification.md), [implementation status](docs/implementation-plan.md), [architecture](docs/architecture.md) and [content provenance](docs/content-provenance.md).
+
+## Git workflow
+
+Feature branches now share the real `main` ancestor. See [the repair record](docs/git-history-repair.md). Branch from fetched `main` or a deliberate dependency branch; use Conventional Commits, one feature PR at a time, CI/review and squash merge. Do not initialize a second independent history. No database, authentication or server-side user persistence belongs in this release.
