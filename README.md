@@ -1,5 +1,7 @@
 # Ching
 
+A lightweight showcase demonstrating GPT-6 Astra performance, guided by Specification Engineering.
+
 Game-first Mandarin learning, targeting **0.0.1 pre-alpha**. No database, authentication, or server-side user persistence.
 
 This repository starts with the specification's first milestone: **contracts and static content**. It is a tested foundation, not yet a playable app. React/Tailwind screens, NestJS routes, game engines, audio, and browser persistence are subsequent milestones.
