@@ -5,7 +5,7 @@ export class AzureTtsProvider implements TtsProvider {
  constructor(private readonly key:string,private readonly region:string){}
  async synthesize(request:TtsRequest,signal:AbortSignal):Promise<TtsResponse>{
   if(!/^[a-z0-9]+$/.test(this.region)||!this.key)throw new Error('TTS configuration is missing.');
-  const voice=request.voice??'zh-CN-XiaoxiaoNeural';
+  const voice=(!request.voice||request.voice==='cmn')?'zh-CN-XiaoxiaoNeural':request.voice;
   const response=await fetch('https://'+this.region+'.tts.speech.microsoft.com/cognitiveservices/v1',{
    method:'POST',signal,headers:{'Ocp-Apim-Subscription-Key':this.key,'Content-Type':'application/ssml+xml','X-Microsoft-OutputFormat':'audio-16khz-128kbitrate-mono-mp3'},
    body:'<speak version="1.0" xml:lang="zh-CN"><voice name="'+escapeXml(voice)+'">'+escapeXml(request.text)+'</voice></speak>',

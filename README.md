@@ -15,7 +15,7 @@ npm run dev
 
 Open [Ching](http://127.0.0.1:5174). Vite runs on port 5174 and proxies the Nest API on port 3001. Both bind to the local machine. `npm run build` checks compilation and creates the production client under `apps/web/dist`; server deployment packaging is a separate release task.
 
-For live audio, copy `.env.example` to `.env`, set `TTS_PROVIDER=azure`, `AZURE_SPEECH_REGION` and `AZURE_SPEECH_KEY`, then restart. Provider credentials stay server-side. Without them, games provide transcripts and an audio retry message; no substitute audio is fabricated.
+Mandarin audio works locally without credentials. For optional Azure neural voices, copy `.env.example` to `.env`, set `TTS_PROVIDER=azure`, `AZURE_SPEECH_REGION` and `AZURE_SPEECH_KEY`, then restart. See [audio and full dictionary setup](docs/audio-and-dictionary.md).
 
 ## Verify
 
@@ -33,7 +33,7 @@ Tests and browser downloads use ignored `.tmp` and `.cache` directories in this 
 - `packages/game-core`: independent deterministic engines and shared scoring.
 - `apps/api/src/modules`: Nest controllers/services; no JSON reads in controllers.
 - `apps/api/src/ports`: ContentRepository, TtsProvider and the future ProgressRepository seam.
-- `apps/api/src/adapters`: immutable static content and Azure TTS.
+- `apps/api/src/adapters`: immutable lesson content, full CC-CEDICT reference, and local/Azure TTS.
 - `apps/api/src/content/data`: versioned validated seeds.
 - `apps/web/src`: React renderers, runtime payload validation and local ProgressStore adapter.
 

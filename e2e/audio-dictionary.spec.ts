@@ -1,0 +1,37 @@
+import {test, expect} from '@playwright/test';
+test('full dictionary audio decodes, plays, and replays without another request', async ({page}) => {
+ let requests = 0;
+ page.on('request', request => {if (request.url().endsWith('/api/v1/tts')) requests++;});
+ await page.goto('/');
+ await page.getByRole('button', {name:'Dictionary', exact:true}).click();
+ await page.getByLabel('Look up a word', {exact:true}).fill('計算機');
+ await page.getByRole('button', {name:'Look up a word', exact:true}).click();
+ const entry = page.locator('.dictionary-entry').first();
+ await expect(entry).toContainText('计算机');
+ await expect(entry).toContainText('computer');
+ await expect(entry).toContainText('jì suàn jī');
+ const response = page.waitForResponse(r => r.url().endsWith('/api/v1/tts'));
+ await entry.getByRole('button', {name:'Play audio'}).click();
+ expect((await response).status()).toBe(200);
+ const audio = entry.locator('audio');
+ await expect(audio).toBeVisible();
+ await expect.poll(() => audio.evaluate(el => (el as HTMLAudioElement).duration)).toBeGreaterThan(0);
+ await expect.poll(() => audio.evaluate(el => (el as HTMLAudioElement).currentTime)).toBeGreaterThan(0.2);
+ await audio.evaluate(el => {const a = el as HTMLAudioElement; a.pause(); a.currentTime = a.duration;});
+ await entry.getByRole('button', {name:'Play audio'}).click();
+ await expect.poll(() => audio.evaluate(el => !(el as HTMLAudioElement).paused)).toBe(true);
+ expect(await audio.evaluate(el => (el as HTMLAudioElement).currentTime < (el as HTMLAudioElement).duration)).toBe(true);
+ expect(requests).toBe(1);
+ await expect(page.getByRole('alert')).toHaveCount(0);
+});
+test('lesson playback succeeds and leaving the round stops it', async ({page}) => {
+ await page.goto('/');
+ await page.getByRole('button', {name:/Listen & Pick/}).click();
+ await page.getByRole('button', {name:'Let’s play'}).click();
+ await page.getByRole('button', {name:'Play audio'}).click();
+ const audio = page.locator('audio');
+ await expect.poll(() => audio.evaluate(el => (el as HTMLAudioElement).currentTime)).toBeGreaterThan(0.1);
+ await page.getByRole('button', {name:'Skip this round'}).click();
+ await page.getByRole('button', {name:'Next round'}).click();
+ await expect(page.locator('audio')).toBeHidden();
+});

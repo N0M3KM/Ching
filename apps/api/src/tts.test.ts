@@ -23,7 +23,7 @@ it('limits requests per client',async()=>{
  await expect(service.speak({text:'你好'},'a')).rejects.toMatchObject({status:429});
 });
 it('returns validated errors and provider unavailable response over HTTP',async()=>{
- const old=process.env.TTS_PROVIDER;delete process.env.TTS_PROVIDER;
+ const old=process.env.TTS_PROVIDER;process.env.TTS_PROVIDER='disabled';
  const app=await createApp();
  try{
   for(const body of [{text:''},{text:'a'.repeat(201)},{text:'你好',voice:'bad'},{text:'你好',secret:'x'}]){

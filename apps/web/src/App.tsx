@@ -720,7 +720,7 @@ function AppFooter({ copyText }: { copyText: ReturnType<typeof copy> }) {
           <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">
             CC BY-SA 4.0
           </a>{' '}
-          · curated subset, adapted pinyin and metadata.
+          · full dictionary plus curated lesson entries; adapted pinyin and metadata.
         </p>
         <p>
           <a href="https://tatoeba.org/en/sentences/show/4869782" target="_blank" rel="noreferrer">
@@ -728,6 +728,7 @@ function AppFooter({ copyText }: { copyText: ReturnType<typeof copy> }) {
           </a>{' '}
           · CC BY 2.0 FR; Ching translation and pinyin. Other practice sentences: Ching.
         </p>
+        <p>Local Mandarin speech: eSpeak NG / Echogarden (GPL-3.0); synthesized on the server.</p>
         <p>Hanzi Writer · MIT. Stroke data: Make Me a Hanzi, Arphic Public License.</p>
       </details>
     </footer>

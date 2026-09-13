@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "tsc -b && vite build --config apps/web/vite.config.mts apps/web",
+    "build": "tsc -b && node scripts/copy-api-assets.mjs && vite build --config apps/web/vite.config.mts apps/web",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
@@ -25,7 +25,8 @@
     "test:e2e": "node scripts/runtime.mjs e2e",
     "dev:inner": "concurrently -k \"npm:dev:api\" \"npm:dev:web\"",
     "test:e2e:inner": "playwright test",
-    "browser:install": "node scripts/browser-install.mjs"
+    "browser:install": "node scripts/browser-install.mjs",
+    "dictionary:import": "tsx scripts/import-dictionary.mts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

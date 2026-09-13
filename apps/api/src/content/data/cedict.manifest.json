@@ -1,0 +1,10 @@
+{
+  "source": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+  "attribution": "CC-CEDICT contributors",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "retrievedAt": "2026-09-13T09:04:56.909Z",
+  "entries": 125047,
+  "sha256": "b8c062da61ed1709c52a2a26370f18dfc0fcd4d4c487a9628fa73eb336e341e4",
+  "changes": "Original archive preserved. Runtime conversion to JSON records, tone-mark pinyin, stable IDs and search indexes."
+}

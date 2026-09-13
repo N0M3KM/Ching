@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import type { Locale } from '@ching/contracts';
+import { AudioPlayer } from './AudioPlayer.js';
 import { copy } from './i18n.js';
 import { api, dictionarySchema } from './schemas.js';
 import type { z } from 'zod';
@@ -79,6 +80,7 @@ function DictionaryEntry({ entry, locale }: { entry: Entry; locale: Locale }) {
         {headword} <small>{entry.pinyin}</small>
       </h2>
       <p>{entry.definitions.join('; ')}</p>
+      <AudioPlayer key={entry.audioText} text={entry.audioText} locale={locale}/>
       <small>{sourceLabel}</small>
     </article>
   );

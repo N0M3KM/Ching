@@ -126,7 +126,7 @@ export const dictionarySchema = z.object({
   entries: z.array(
     z.object({
       id: idSchema,
-      level: z.enum(LEVELS),
+      level: z.enum(LEVELS).optional(),
       simplified: z.string(),
       traditional: z.string().optional(),
       pinyin: z.string(),

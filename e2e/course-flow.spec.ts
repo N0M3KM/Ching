@@ -54,9 +54,10 @@ test('mobile, language switching, dictionary and audio fallback',async({page})=>
  await page.locator('#locale').selectOption('en');
  await page.getByRole('button',{name:'Dictionary',exact:true}).click();
  await page.getByLabel('Look up a word',{exact:true}).fill('水');await page.getByRole('button',{name:'Look up a word',exact:true}).click();
- await expect(page.locator('.dictionary-entry')).toContainText('water');
+ await expect(page.locator('.dictionary-entry').first()).toContainText('water');
  await page.getByRole('button',{name:'Learn',exact:true}).click();
  await page.getByRole('button',{name:/Listen & Pick/}).click();await page.getByRole('button',{name:'Let’s play'}).click();
+ await page.route('**/api/v1/tts',route=>route.fulfill({status:503,json:{code:'TTS_UNAVAILABLE'}}),{times:1});
  await page.getByRole('button',{name:'Play audio'}).click();
  await expect(page.getByText('Audio is unavailable. Use the transcript or retry playback.')).toBeVisible();
  await page.getByText('Show transcript',{exact:true}).click();await expect(page.locator('.hanzi-small')).toBeVisible();
